@@ -1,0 +1,26 @@
+//@function rem($px){
+//	@return $px/16px + 0rem;
+//}
+
+@mixin card {
+	background-color: rgba(255,255,255, 0.85);
+	border-radius: 5px;
+	
+	padding-top: 2.63rem;
+	
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+@mixin cardmenu {
+	background-color: rgba($green , 0.85);
+	
+	color: #fff;
+	text-align: center;
+	
+	&:hover {
+		background-color: rgba($darkgreen , 0.85);
+	}
+}

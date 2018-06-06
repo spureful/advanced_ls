@@ -1,0 +1,38 @@
+.welcomecard
+	.welcomecard__image
+		+image('welcome/ava.jpg', 'Аватар', 'welcomecard__ava')
+		
+	.welcomecard__content
+		.welcomecard__name Анна Сысоева
+		.welcomecard__text Личный сайт веб разработчика
+		
+	.welcomecard__social
+		ul.welcomecard__social-list
+			li.welcomecard__social-item
+				a.welcomecard__social-link(href='https://vk.com/spureful')
+					+icon('vk', 'welcomecard__social-icon')
+			li.welcomecard__social-item
+				a.welcomecard__social-link(href='https://github.com/spureful')
+					+icon('github', 'welcomecard__social-icon')
+			li.welcomecard__social-item
+				a.welcomecard__social-link(href='#')
+					+icon('in', 'welcomecard__social-icon')
+					
+	.welcomecard__menu
+		ul.welcomecard__menu-list
+			li.welcomecard__menu-item
+				a.welcomecard__menu-link(href='myworks.html') Мои работы
+				
+			li.welcomecard__menu-item
+				a.welcomecard__menu-link(href='about.html') Обо мне
+				
+			li.welcomecard__menu-item
+				a.welcomecard__menu-link(href='blog.html') Блог
+	
+//	- var itemName = {myworks.html: 'Мои работы', about.html: 'Обо мне', blog.html: 'Блог'}
+//	
+//	.welcomecard__menu
+//		ul.welcomecard__menu-list
+//			each value, key in itemName
+//				li.welcomecard__menu-item
+//					a.welcomecard__menu-link(href=key)= value

@@ -1,0 +1,84 @@
+.welcomecard {
+	@include card;
+	
+}
+.welcomecard__image{text-align: center;}
+
+.welcomecard__ava {
+	border-radius: 50%;
+}
+
+.welcomecard__content {
+	text-align: center;
+	margin-bottom:2.19rem ;
+}
+
+.welcomecard__name {
+	font-weight: 500;
+	color: #455a64;
+	font-size: 1.75rem;
+	
+}
+
+.welcomecard__text{
+	color: rgba(#455a64, 0.8);
+}
+
+.welcomecard__social{
+	margin-bottom: 2.5rem;
+}
+.welcomecard__social-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	
+	justify-content: center;
+}
+
+.welcomecard__social-item{
+	margin-right: 1.56rem;
+	&:last-child{
+		margin-right: 0;
+	}
+}
+.welcomecard__social-icon{
+	width: 2.06rem;
+	height: 1.44rem;
+	fill: rgba($green, 0.5);
+	
+	&:hover {
+		fill: $green;
+	}
+}
+
+.welcomecard__menu {
+	
+}
+
+.welcomecard__menu-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
+
+.welcomecard__menu-item {
+	@include cardmenu;
+	padding: 0.96rem 1.94rem ;
+	border-right: 2px solid #73cac3;
+	
+	&:last-child {
+		border-right: none;
+	}
+}
+
+.welcomecard__menu-link {
+	white-space: nowrap;
+	font-weight: 500;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: #fff;
+}
