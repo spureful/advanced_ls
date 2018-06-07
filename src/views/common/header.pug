@@ -1,0 +1,20 @@
+header.header
+	div(class=`${containerHeader}`)
+		.header__row
+			.header__row-left
+				include social.pug
+			.header__row-right
+				.hamburgermenu.js__hamburgermenu
+					a.hamburgermenu__item
+			
+		.header__main
+			.header__img
+				+image('welcome/ava.jpg', 'Аватар', 'header__ava')
+			div(class=`${headerContentClass}`)
+				h2.header__title(class=`${headerTitleClass}`) #{headerTitle}
+				div(class=`${headerTextClass}`) #{headerText}
+			div(class=`#{headerArrowClass}`) 
+				
+				
+				
+	

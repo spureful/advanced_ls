@@ -1,0 +1,20 @@
+.container__header_blog {
+	max-width: 71.63rem; 
+	margin: 0 auto;
+}
+
+.header__content_blog {
+	background: svg-load('blog_header.svg', fill=rgba(255, 255, 255, 0.07)) center center no-repeat;
+
+	background-size: cover;
+	text-align: center;
+
+	width: 18.25rem;
+	min-height: 11.25rem;
+	margin-bottom: 4.19rem;
+}
+
+.header__title_blog {
+	@include title(#fff);
+		padding-top: 20px;
+}

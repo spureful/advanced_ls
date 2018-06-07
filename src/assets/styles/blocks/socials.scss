@@ -1,0 +1,30 @@
+.social-list{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+}
+
+.social-item{
+	margin-right: 1.88rem;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+
+.social-icon {
+	width: 1.875rem;
+	height: 1.25rem;
+	fill: rgba(255,255,255, 0.5);
+	
+	transition: 0.5s;
+	
+	&:hover {
+		fill: #fff;
+	}
+}
+
+

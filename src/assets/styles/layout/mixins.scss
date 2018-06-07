@@ -24,3 +24,33 @@
 		background-color: rgba($darkgreen , 0.85);
 	}
 }
+
+@mixin title($titleColor) {
+		font-family: bernier, arial, sans-serif;
+	font-size: 3.94rem;
+	color: $titleColor;
+		
+	position: relative;
+	
+	
+	&:before, &:after {
+		content: '';
+		display: block;
+		width: 26px;
+		height: 6px;
+		background-color: rgba($titleColor, 0.2);
+		
+		position: absolute;
+		top: 50%;
+		
+	}
+	
+	&:before {
+	left: 0;	
+	}
+	
+	
+	&:after {
+		right: 0;
+	}
+}
