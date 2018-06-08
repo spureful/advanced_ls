@@ -2,11 +2,21 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Обо мне'
+  - var headerTitle = 'Анна Сысоева'
+  - var headerText = 'Личный сайт веб разработчика'
+  - var headerContentClass = 'header__content'
+  - var headerTitleClass = 'header__title'
+  - var headerTextClass = 'header__text'
+  - var containerHeader = 'container__header'
 
 
 block scripts
   script(src='about.bundle.js')
 
+block arrow
+  .header__arrow-block
+    include ../common/headerarrow.pug
+
 block content
-  h1 Страничка "Обо Мне"  
+  h1 Страничка "Обо Мне"
   

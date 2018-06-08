@@ -4,3 +4,11 @@ mixin icon(iconName, iconClass)
 
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
+
+mixin articleTitles(artTitles)
+  ul.aricles-titles__list
+    each artTitle in artTitles
+      li(class='aricles-titles__item')= artTitle
+
+				   
+  

@@ -67,12 +67,7 @@
 
 .welcomecard__menu-item {
 	@include cardmenu;
-	padding: 0.96rem 1.94rem ;
-	border-right: 2px solid #73cac3;
-	
-	&:last-child {
-		border-right: none;
-	}
+
 }
 
 .welcomecard__menu-link {
