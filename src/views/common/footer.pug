@@ -1,2 +1,21 @@
+- var footerColor = 'footer_textcolor'
+
 footer.footer
-  h2 Copyright &copy;
+	.container
+		.footer__row-links
+			.footer__menu
+				include menu.pug
+			.footer__socials
+				include social_round.pug
+	hr.footer__line
+	.container
+		.footer__row-content
+			.footer__column-left
+				.footer__content Я веб-разработчик из Санкт-Петербурга, и этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. 
+			.footer__column-right
+				include welcomefooter.pug
+		
+		
+	
+	
+	

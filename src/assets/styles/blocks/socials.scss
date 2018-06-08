@@ -1,4 +1,4 @@
-.social-list{
+.social-list {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -7,7 +7,7 @@
 
 }
 
-.social-item{
+.social-item {
 	margin-right: 1.88rem;
 	&:last-child {
 		margin-right: 0;
@@ -18,13 +18,62 @@
 .social-icon {
 	width: 1.875rem;
 	height: 1.25rem;
-	fill: rgba(255,255,255, 0.5);
-	
+	fill: rgba(255, 255, 255, 0.5);
+
 	transition: 0.5s;
-	
+
 	&:hover {
 		fill: #fff;
 	}
 }
 
+.socialround-list {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+}
 
+.socialround-item {
+	margin-right: 0.6rem;
+	position: relative;
+
+	&:before {
+		content: '';
+		display: block;
+		background-color: lightgrey;
+		height: 2.6rem;
+		width: 2.5rem;
+		border-radius: 50%;
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		transition: 0.5s;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+
+	&:hover:before {
+		background-color: #555b5e;
+	}
+
+}
+
+.socialround-icon {
+	height: 2.6rem;
+	width: 2.6rem;
+	stroke: lightgrey;
+	fill: #555b5e;
+	position: relative;
+	z-index: 20;
+
+	transition: 0.5s;
+
+	&:hover {
+		fill: #fff;
+		stroke: none;
+	}
+}

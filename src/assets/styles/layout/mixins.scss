@@ -41,16 +41,16 @@
 		background-color: rgba($titleColor, 0.2);
 		
 		position: absolute;
-		top: 50%;
+		top: 55%;
 		
 	}
 	
 	&:before {
-	left: 0;	
+	left: 5%;	
 	}
 	
 	
 	&:after {
-		right: 0;
+		right: 12%;
 	}
 }

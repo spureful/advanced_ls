@@ -1,5 +1,5 @@
 header.header
-	div(class=`${containerHeader}`)
+	.container
 		.header__row
 			.header__row-left
 				include social.pug
@@ -13,7 +13,9 @@ header.header
 			div(class=`${headerContentClass}`)
 				h2.header__title(class=`${headerTitleClass}`) #{headerTitle}
 				div(class=`${headerTextClass}`) #{headerText}
-			div(class=`#{headerArrowClass}`) 
+			div(class=`${headerArrowClass}`)
+			
+		
 				
 				
 				
