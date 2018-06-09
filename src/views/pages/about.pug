@@ -47,3 +47,19 @@ block content
         .aboutme__skills-text Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
       .aboutme__skills-block
         include ../common/skills.pug
+
+  section.map
+    .map__container
+      .contacts
+        .contacts__title
+          h2.contacts__titletext Контакты
+        .contacts__content
+          ul.contacts__list
+            - var contItems = [['skype', 'skype_kdn'], ['envelope', 'astahov@gmail.com'], ['phone', '+7 931 200 93 24'], ['map_marker', 'г.Новосибирск, ул. Инская, д. 5']]
+              each contItem in contItems
+                li.contacts__item
+                  .contacts__icon
+                    +icon (`${contItem[0]}`, 'contacts__icon-svg')
+                  a.contacts__contact
+                    .contacts__contact-text #{contItem[1]}
+    include ../common/footer.pug

@@ -33,6 +33,7 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	overflow: visible;
 }
 
 .socialround-item {
@@ -43,8 +44,8 @@
 		content: '';
 		display: block;
 		background-color: lightgrey;
-		height: 2.26rem;
-		width: 2.27rem;
+		height: 2.25rem;
+		width: 2.25rem;
 		border-radius: 50%;
 		position: absolute;
 		top: 0;
@@ -63,10 +64,10 @@
 }
 
 .socialround-icon {
-	height: 2.25rem;
-	width: 2.25rem;
+	height: 2.26rem;
+	width: 2.29rem;
 	stroke: lightgrey;
-	fill: #555b5e;
+	fill: rgba(#555b5e, 0.85);
 	position: relative;
 	z-index: 20;
 
