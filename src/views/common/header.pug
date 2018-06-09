@@ -7,10 +7,10 @@ header.header
 				.hamburgermenu.js__hamburgermenu
 					a.hamburgermenu__item
 			
-		.header__main
+		div(class=`${headerMainBg}`)
 			.header__img
 				+image('welcome/avatar.jpg', 'Аватар', 'header__ava')
 			div(class=`${headerContentClass}`)
-				h2.header__title(class=`${headerTitleClass}`) #{headerTitle}
+				h2(class=`${headerTitleClass}`) #{headerTitle}
 				div(class=`${headerTextClass}`) #{headerText}
 		block arrow

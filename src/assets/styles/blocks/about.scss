@@ -1,0 +1,145 @@
+.aboutme {
+	height: 100vh;
+	min-height: 650px;
+	
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	position: relative;
+}
+
+.aboutme__bg-left  {
+	width: 50%;
+	height: 50%;
+	fill: #efeee9;
+	position: absolute;
+	top: -20%;
+	
+}
+
+.aboutme__bg-right  {
+	width: 50%;
+	height: 50%;
+	fill: #eeebdf;
+	position: absolute;
+	top: -20%;
+	right: 0;
+}
+.aboutme__column-left {
+	width: 50%;
+	
+	
+	background-color: #efeee9;
+	
+
+	padding:0 5%;
+
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+
+}
+
+.aboutme__title {
+	width: 50%;
+	text-align: center;
+	margin-right: 2rem;
+
+	
+}
+
+.aboutme__title-txt {
+	@include title(#373e42, 3.94rem);
+	
+	background: svg-load('about_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
+	background-size: 100%;
+	padding: 2rem;
+	
+	
+&:before {
+		left: 10%;
+	}
+
+
+	&:after {
+		right: 10%;
+	}
+}
+
+.aboutme__person {
+	width: 50%;
+}
+
+.aboutme__avatar{
+	padding-top: 1rem;
+	margin-bottom: 2rem;
+	
+}
+
+.aboutme__content-title{
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+.aboutme__content-titletext {
+@include title(#455a64, 2.1875rem);
+	&:before {
+		left: 25%;
+	}
+
+
+	&:after {
+		right: 25%;
+	}
+}
+
+
+.aboutme__content-text {
+	color: #455a64;
+	line-height: 1.5em;
+	p{
+	margin-bottom: 1rem;	
+	}
+}
+.aboutme__column-right {
+	padding: 0 5%;
+	width: 50%;
+	background-color: #eeebdf;
+	
+	
+}
+
+.aboutme__skills{
+	text-align: center;
+	max-width: 19.69rem;
+	padding: 2rem;
+	margin: 0 auto;
+}
+
+.aboutme__skills-title{
+	@include title(#455a64, 2.1875rem);
+	
+	&:before {
+		left: -10%;
+		top: 25%;
+	}
+
+
+	&:after {
+		right: -10%;
+		top: 25%;
+	}
+	
+}
+
+.aboutme__skills-text {
+	color: #455a64;
+}
+
+.aboutme__skills-content{
+	margin-bottom: 3.44rem;
+}

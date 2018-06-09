@@ -17,4 +17,9 @@ display: flex;}
 	color: #fff;
 	text-decoration: none;
 	text-transform: capitalize;
+	transition: 0.5s;
+	
+	&:hover{
+		color: #00bfa5;
+	}
 }
