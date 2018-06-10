@@ -1,0 +1,21 @@
+extends ../auth.layout.pug
+
+block content
+	.welcome
+					
+		.welcome__main
+			.login__title
+				h2.login__title-txt Авторизуйтесь
+			.login__form
+				form.form-login#form-login
+					input(type='text' class='form-login__login')
+					input(type='password' class='form-login__password')
+					label.form-login__checkbox-label
+						input(type='checkbox' id='checkbox__login').form-login__checkbox 
+						label.form-login__checkbox-text(for='checkbox__login') я человек
+						.form-login__checkbox-custom
+						
+					
+			
+		
+		include ../common/welcomefooter.pug
