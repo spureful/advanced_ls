@@ -1,5 +1,7 @@
 .welcomecard {
 	@include card;
+	backface-visibility: hidden;
+
 	
 }
 .welcomecard__image{text-align: center;}
@@ -53,9 +55,7 @@
 	}
 }
 
-.welcomecard__menu {
-	
-}
+
 
 .welcomecard__menu-list {
 	display: -webkit-flex;
@@ -76,4 +76,8 @@
 	text-decoration: none;
 	text-transform: capitalize;
 	color: #fff;
+}
+
+.js__rotate-card {
+	backface-visibility: hidden;
 }

@@ -26,6 +26,8 @@
 	position: absolute;
 	top: -20%;
 	right: 0;
+	
+	
 }
 .aboutme__column-left {
 	width: 50%;
@@ -48,6 +50,7 @@
 	width: 50%;
 	text-align: center;
 	margin-right: 2rem;
+	
 
 	
 }
@@ -57,7 +60,8 @@
 	
 	background: svg-load('about_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
 	background-size: 100%;
-	padding: 2rem;
+	padding:0 2rem;
+	
 	
 	
 &:before {
@@ -106,7 +110,7 @@
 	}
 }
 .aboutme__column-right {
-	padding: 0 5%;
+	padding: 0 2.5%;
 	width: 50%;
 	background-color: #eeebdf;
 	
@@ -116,8 +120,9 @@
 .aboutme__skills{
 	text-align: center;
 	max-width: 19.69rem;
-	padding: 2rem;
+	padding:0 2rem;
 	margin: 0 auto;
+	margin-bottom: 1rem;
 }
 
 .aboutme__skills-title{
