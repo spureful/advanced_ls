@@ -2,7 +2,8 @@ header.header
 	div(class=`${containerHeader}`)
 		.header__row
 			.header__row-left
-				include social.pug
+				- var SocialItems = [['', 'https://vk.com/spureful', 'vk'],['', 'https://github.com/spureful', 'github'],['','#', 'in']]
+					+socials(SocialItems)
 			.header__row-right
 				.hamburgermenu.js__hamburgermenu
 					a.hamburgermenu__item

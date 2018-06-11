@@ -8,7 +8,21 @@ mixin image(imagePath, imageAlt, imageClass)
 mixin articleTitles(artTitles)
   ul.aricles-titles__list
     each artTitle in artTitles
-      li(class='aricles-titles__item')= artTitle
+      li.aricles-titles__item(class=`${artTitle[1]}`)= artTitle[0]
+	  
+mixin socials(SocialItems, socialMode)
+  
+  ul.social__list(class=`social__list_${socialMode}`)
+    each SocialItem in SocialItems  
+      li.social__item(class=`social__item_${SocialItem[0]}`)
+        a.social__link(href=`${SocialItem[1]}`)
+          +icon(`${SocialItem[2]}`, 'social__icon' + ` social__icon_${SocialItem[0]}`)  
+
+	
+	  
+
+	  
+
 
 				   
   

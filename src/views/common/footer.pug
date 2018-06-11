@@ -6,7 +6,8 @@ footer.footer
 			.footer__menu
 				include menu.pug
 			.footer__socials
-				include social_round.pug
+				- var SocialItems = [['round', 'https://vk.com/spureful', 'vk_round'],['round', 'https://github.com/spureful', 'github_round'],['round','#', 'in_round']]
+					+socials(SocialItems, 'round' )
 	hr.footer__line
 	.container
 		.footer__row-content
