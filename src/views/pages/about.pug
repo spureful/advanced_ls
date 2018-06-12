@@ -29,20 +29,20 @@ block content
       
      
       .aboutme__title
-        h2.aboutme__title-txt Обо мне
+        h2.title.title_aboutme Обо мне
       .aboutme__person
         .aboutme__avatar
           +image('about/avatar.jpg', 'Фото', 'aboutme__avatar-img')
         .aboutme__content
           .aboutme__content-title
-            h3.aboutme__content-titletext Кто я
+            h3.subtitle-blue.subtitle-blue_aboutme Кто я
           .aboutme__content-text
             p Я веб разработчик из Санкт-Петербурга. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
             p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
 		  
     .aboutme__column-right
       .aboutme__skills
-        h3.aboutme__skills-title Чем я могу быть вам полезна
+        h3.subtitle-blue.subtitle-blue_skills Чем я могу быть вам полезна
       .aboutme__skills-content
         .aboutme__skills-text Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
       .aboutme__skills-block
@@ -52,14 +52,14 @@ block content
     .map__container
       .contacts
         .contacts__title
-          h2.contacts__titletext Контакты
+          h3.subtitle Контакты
         .contacts__content
           ul.contacts__list
-            - var contItems = [['skype', 'skype_kdn'], ['envelope', 'astahov@gmail.com'], ['phone', '+7 931 200 93 24'], ['map_marker', 'г.Новосибирск, ул. Инская, д. 5']]
+            - var contItems = [['skype', 'ann-kd', 'skype:ann-kd'], ['envelope', 'rw1zz@yandex.ru', 'mailto:rw1zz@yandex.ru'], ['phone', '+7 904 559 73 77', 'tel:+79045597377'], ['map_marker', 'г.Санкт-Петербург, ул. Инская, д. 5', '#']]
               each contItem in contItems
                 li.contacts__item
                   .contacts__icon
                     +icon (`${contItem[0]}`, 'contacts__icon-svg')
-                  a.contacts__contact
+                  a.contacts__contact(href=`${contItem[2]}`)
                     .contacts__contact-text #{contItem[1]}
     include ../common/footer.pug

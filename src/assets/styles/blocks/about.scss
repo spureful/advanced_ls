@@ -1,7 +1,7 @@
 .aboutme {
-	height: 100vh;
+
 	min-height: 650px;
-	
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -10,33 +10,34 @@
 	position: relative;
 }
 
-.aboutme__bg-left  {
+.aboutme__bg-left {
 	width: 50%;
 	height: 50%;
 	fill: #efeee9;
 	position: absolute;
 	top: -20%;
-	
+
 }
 
-.aboutme__bg-right  {
+.aboutme__bg-right {
 	width: 50%;
 	height: 50%;
 	fill: #eeebdf;
 	position: absolute;
 	top: -20%;
 	right: 0;
-	
-	
+
+
 }
+
 .aboutme__column-left {
 	width: 50%;
-	
-	
-	background-color: #efeee9;
-	
 
-	padding:0 5%;
+
+	background-color: #efeee9;
+
+
+	padding: 0 5%;
 
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -50,47 +51,39 @@
 	width: 50%;
 	text-align: center;
 	margin-right: 2rem;
-	
 
-	
+
+
 }
 
-.aboutme__title-txt {
-	@include title(#373e42, 3.94rem);
+.title_aboutme {
 	
+
 	background: svg-load('about_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
 	background-size: 100%;
-	padding:0 2rem;
-	
-	
-	
-&:before {
-		left: 10%;
-	}
+	padding: 0 2rem;
 
 
-	&:after {
-		right: 10%;
-	}
+
 }
 
 .aboutme__person {
 	width: 50%;
 }
 
-.aboutme__avatar{
+.aboutme__avatar {
 	padding-top: 1rem;
 	margin-bottom: 2rem;
-	
+
 }
 
-.aboutme__content-title{
+.aboutme__content-title {
 	text-align: center;
 	margin-bottom: 2rem;
 }
 
-.aboutme__content-titletext {
-@include title(#455a64, 2.1875rem);
+.subtitle-blue_aboutme{
+	
 	&:before {
 		left: 25%;
 	}
@@ -105,29 +98,30 @@
 .aboutme__content-text {
 	color: #455a64;
 	line-height: 1.5em;
-	p{
-	margin-bottom: 1rem;	
+	p {
+		margin-bottom: 1rem;
 	}
 }
+
 .aboutme__column-right {
 	padding: 0 2.5%;
 	width: 50%;
 	background-color: #eeebdf;
-	
-	
+
+
 }
 
-.aboutme__skills{
+.aboutme__skills {
 	text-align: center;
 	max-width: 19.69rem;
-	padding:0 2rem;
+	padding: 0 2rem;
 	margin: 0 auto;
 	margin-bottom: 1rem;
 }
 
-.aboutme__skills-title{
-	@include title(#455a64, 2.1875rem);
+.subtitle-blue_skills {
 	
+
 	&:before {
 		left: -10%;
 		top: 25%;
@@ -138,19 +132,19 @@
 		right: -10%;
 		top: 25%;
 	}
-	
+
 }
 
 .aboutme__skills-text {
 	color: #455a64;
 }
 
-.aboutme__skills-content{
+.aboutme__skills-content {
 	margin-bottom: 3.44rem;
 }
 
 .map {
-	background-image: url(assets/images/about/map.jpg);
+	background-image: url(../assets/images/about/map.jpg);
 	background-size: cover;
 	position: relative;
 	height: 100vh;
@@ -160,24 +154,22 @@
 	display: -o-flex;
 	display: flex;
 	align-items: flex-end;
-	
+
 }
 
-.contacts{
+.contacts {
 	@include card;
 	padding: 2.1875rem;
 }
 
-.contacts__title{
+.contacts__title {
 	text-align: center;
 	margin-bottom: 1.8rem;
 }
 
-.contacts__titletext {
-	@include title(#373e42, 2.1875rem )
-}
 
-.contacts__list{
+
+.contacts__list {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -192,23 +184,27 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
+
 	margin-bottom: 1.625rem;
-	
-	&:last-child{
+
+	&:last-child {
 		margin-bottom: 0;
 	}
 }
 
-.contacts__icon{
+.contacts__icon {
 	margin-right: 0.625rem;
 }
-.contacts__icon-svg{
+
+.contacts__icon-svg {
 	width: 25px;
 	height: 25px;
 	fill: #00bea4;
 }
 
+.contacts__contact {
+	text-decoration: none;
+}
 .contacts__contact-text {
 	color: rgba(#455a64, 0.8);
 	font-weight: 500;
