@@ -1,4 +1,4 @@
-.social-list {
+.social__list {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -7,7 +7,7 @@
 
 }
 
-.social-item {
+.social__item {
 	margin-right: 1.88rem;
 	&:last-child {
 		margin-right: 0;
@@ -15,7 +15,7 @@
 }
 
 
-.social-icon {
+.social__icon {
 	width: 1.875rem;
 	height: 1.25rem;
 	fill: rgba(255, 255, 255, 0.5);
@@ -27,7 +27,7 @@
 	}
 }
 
-.socialround-list {
+.social__list_round {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -36,7 +36,7 @@
 	overflow: visible;
 }
 
-.socialround-item {
+.social__item_round {
 	margin-right: 0.6rem;
 	position: relative;
 
@@ -63,9 +63,9 @@
 
 }
 
-.socialround-icon {
-	height: 2.26rem;
-	width: 2.29rem;
+.social__icon_round {
+	height: 2.23rem;
+	width: 2.23rem;
 	stroke: lightgrey;
 	fill: rgba(#555b5e, 0.85);
 	position: relative;

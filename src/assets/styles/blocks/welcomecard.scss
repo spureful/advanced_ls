@@ -1,5 +1,7 @@
 .welcomecard {
 	@include card;
+	backface-visibility: hidden;
+
 	
 }
 .welcomecard__image{text-align: center;}
@@ -26,24 +28,25 @@
 
 .welcomecard__social{
 	margin-bottom: 2.5rem;
+	
 }
-.welcomecard__social-list {
+.social__list_welcomecard {
+	
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
 	justify-content: center;
 }
 
-.welcomecard__social-item{
+.social__item_welcomecard{
 	margin-right: 1.56rem;
 	&:last-child{
 		margin-right: 0;
 	}
 }
-.welcomecard__social-icon{
+.social__icon_welcomecard{
 	width: 2.06rem;
 	height: 1.44rem;
 	fill: rgba($green, 0.5);
@@ -53,9 +56,7 @@
 	}
 }
 
-.welcomecard__menu {
-	
-}
+
 
 .welcomecard__menu-list {
 	display: -webkit-flex;
@@ -76,4 +77,8 @@
 	text-decoration: none;
 	text-transform: capitalize;
 	color: #fff;
+}
+
+.js__rotate-card {
+	backface-visibility: hidden;
 }

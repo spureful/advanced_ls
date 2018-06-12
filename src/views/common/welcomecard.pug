@@ -7,16 +7,8 @@
 		.welcomecard__text Личный сайт веб разработчика
 		
 	.welcomecard__social
-		ul.welcomecard__social-list
-			li.welcomecard__social-item
-				a.welcomecard__social-link(href='https://vk.com/spureful')
-					+icon('vk', 'welcomecard__social-icon')
-			li.welcomecard__social-item
-				a.welcomecard__social-link(href='https://github.com/spureful')
-					+icon('github', 'welcomecard__social-icon')
-			li.welcomecard__social-item
-				a.welcomecard__social-link(href='#')
-					+icon('in', 'welcomecard__social-icon')
+		- var SocialItems = [['welcomecard', 'https://vk.com/spureful', 'vk'],['welcomecard', 'https://github.com/spureful', 'github'],['welcomecard','#', 'in']]
+			+socials(SocialItems, 'welcomecard')
 					
 	.welcomecard__menu
 		ul.welcomecard__menu-list
@@ -29,10 +21,3 @@
 			li.welcomecard__menu-item
 				a.welcomecard__menu-link(href='blog.html') Блог
 	
-//	- var itemName = {myworks.html: 'Мои работы', about.html: 'Обо мне', blog.html: 'Блог'}
-//	
-//	.welcomecard__menu
-//		ul.welcomecard__menu-list
-//			each value, key in itemName
-//				li.welcomecard__menu-item
-//					a.welcomecard__menu-link(href=key)= value
