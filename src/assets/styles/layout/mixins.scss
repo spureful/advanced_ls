@@ -34,7 +34,7 @@
 	font-family: bernier, arial, sans-serif;
 	font-size: $fontsize;
 	color: $titleColor;
-
+ 
 
 	position: relative;
 
@@ -53,11 +53,11 @@
 	}
 
 	&:before {
-		left: 5%;
+		left: 10%;
 	}
 
 
 	&:after {
-		right: 12%;
+		right: 10%;
 	}
 }

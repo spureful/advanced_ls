@@ -27,8 +27,11 @@
 .header__title_blog {
 	@include title(#fff, 3.94rem);
 	padding-top: 20px;
+	
+	
 }
 
 .header__text_blog {
 	color: #fff;
+	
 }

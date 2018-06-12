@@ -3,26 +3,31 @@
 	height: 2.31rem;
 	position: relative;
 	cursor: pointer;
+	
+	background: none;
+	
+
 
 }
 
+
 .hamburgermenu__item {
 
-	display: inline-block;
+	
+	display: block;
 	
 	background-color: #fff;
 	width: 2.56rem;
 	height: 0.31rem;
 
 	border-radius: 3px;
+	text-align: center;
 	
+	position: absolute;
+	left: 0;
+	top: 50%;
+	padding: 0;
 	
-	
-	
-}
-
-.hamburgermenu__item {
-
 	&:before,
 	&:after {
 		content: '';
@@ -38,11 +43,11 @@
 	}
 	&:before {
 		left: 0;
-		top: -0.31rem;
+		top: -300%;
 	}
 
 	&:after {
 		left: 0;
-		bottom:0.31rem;
+		bottom:-300%;
 	}
 }
