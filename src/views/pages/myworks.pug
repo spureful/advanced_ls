@@ -46,11 +46,11 @@ block content
 			h2.title Что обо мне говорят
 			
 		.workspage__quotes
-			- var qoutes = [['content', 'dmitr', 'name', 'position'], ['content1', 'vladimir', 'name1', 'position1']]
+			- var qoutes = [['Этот студент проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!', 'dmitr', 'Ковальчук Дмитрий', 'основатель Loftschool'], ['Этот код выдержит любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!', 'vladimir', 'Сабанцев Владимир', 'преподаватель']]
 				ul.workspage__quotes-list
 					each quote in qoutes
 						li.workspage__quotes-item
-							.workspage__quotes-content  #{quote[0]}
+							blockquote.workspage__quotes-content  #{quote[0]}
 							.workspage__quotes-person
 								.workspage__quotes-photo
 									+image(`works/${quote[1]}.jpg`,'photo','workspage__quotes-photo-img')
@@ -58,16 +58,21 @@ block content
 									.workspage__quotes-name  #{quote[2]}
 									.workspage__quotes-position  #{quote[3]}
 									
+									
 		.workspage__form-container.js-blur-wrap
 			.workspage__form-container-wrap.js-blur-container
-				h3.subtitle-blue Связаться со мной
-				form.workspage__form#workspage__form
-					input.workspage__form-input(type='text' name='workspage__input-name' placeholder='Имя')
-					input.workspage__form-input(type='email' name='workspage__input-email' placeholder='Email')
-					textarea.workspage__form-textarea(name='workspage__textarea' placeholder='Ваше сообщение')
-					.workspage__form-buttonsrow
-						button.workspage__button.workspage__button-submit( type='submit') Отправить
-						button.workspage__button.workspage__button-reset( type='reset') Очистить
+			
+				.workspage__form-form
+					.workspage__form-title
+						h3.subtitle_blue Связаться со мной
+					form.workspage__form#workspage__form
+						input.workspage__form-input(type='text' name='workspage__input-name' placeholder='Имя')
+						input.workspage__form-input(type='email' name='workspage__input-email' placeholder='Email')
+						textarea.workspage__form-textarea(name='workspage__textarea' placeholder='Ваше сообщение')
+						.workspage__form-buttonsrow
+							button.workspage__button.workspage__button-submit( type='submit') Отправить
+							button.workspage__button.workspage__button-reset( type='reset') Очистить
+
 			
 
 				
