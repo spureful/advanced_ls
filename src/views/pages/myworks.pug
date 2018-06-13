@@ -11,28 +11,39 @@ block variables
 	- var headerMainBg = 'header__main_portfoliobg'
 
 block scripts
-	script(src='works.bundle.js')
+	script(src='js/works.bundle.js')
+
 
 block content
+	.figure
+		svg(viewBox="0 0 100 100" preserveAspectRatio="none").figure__polyline
+			polyline(points='0,700 0,0 50,90 100,0 100,700 0,700')
+			
 	.workspage__title
-		h2.workspage__title-text Мои работы
+		h2.title Мои работы
 		
 	section.slider
 		.slider__container
 			.slider__info
-				h3.slider__info-title название сайта
-				.slider__info-tags html, css, js
-				a.slider__info-link ссылка
+				.slider__info-container
+					.slider__info-title
+						h3.subtitle-blue.subtitle-blue_slider название сайта
+					.slider__info-tags html, css, js
+					a.slider__info-link Посмотреть сайт
 				
 			.slider__slides
-				.slider__mainslide картинка1
+				.slider__mainslide 
+					+image('works/work-1.png', 'mainslide','slider__mainslide-img')
 				.slider__buttons
-					button.slider__slidedown(type='button') картинка2
-					button.slider__slideup(type='button')   картинка3
+					button.slider__slidedown(type='button')
+						+image('works/work-2.png', 'previewslide','slider__buttonslide-img')
+					button.slider__slideup(type='button')
+						+image('works/work-3.png','previewslide','slider__buttonslide-img')
 					
-	section.workspage__about
-		.workspage__title
-			h2.workspage__title-text Что обо мне говорят
+	section.workspage__about.js-blur-background
+			
+		.workspage__about-title
+			h2.title Что обо мне говорят
 			
 		.workspage__quotes
 			- var qoutes = [['content', 'dmitr', 'name', 'position'], ['content1', 'vladimir', 'name1', 'position1']]
@@ -42,23 +53,25 @@ block content
 							.workspage__quotes-content  #{quote[0]}
 							.workspage__quotes-person
 								.workspage__quotes-photo
-									+image(`works/${quote[1]}.jpg`, 'photo', 'workspage__quotes-photo-img')
+									+image(`works/${quote[1]}.jpg`,'photo','workspage__quotes-photo-img')
 								.workspage__quotes-data
 									.workspage__quotes-name  #{quote[2]}
 									.workspage__quotes-position  #{quote[3]}
 									
-		.workspage__form-container
-			h3.workspage__form__title
-			form.workspage__form#workspage__form
-				input.workspage__form-input(type='text' name='workspage__input-name' placeholder='Имя')
-				input.workspage__form-input(type='email' name='workspage__input-email' placeholder='Email')
-				textarea.workspage__form-textarea(name='workspage__textarea' placeholder='Ваше сообщение')
-				.workspage__form-buttonsrow
-					button.workspage__button.workspage__button-submit( type='submit') Отправить
-					button.workspage__button.workspage__button-reset( type='reset') Очистить
-				
+		.workspage__form-container.js-blur-wrap
+			.workspage__form-container-wrap.js-blur-container
+				h3.subtitle-blue Связаться со мной
+				form.workspage__form#workspage__form
+					input.workspage__form-input(type='text' name='workspage__input-name' placeholder='Имя')
+					input.workspage__form-input(type='email' name='workspage__input-email' placeholder='Email')
+					textarea.workspage__form-textarea(name='workspage__textarea' placeholder='Ваше сообщение')
+					.workspage__form-buttonsrow
+						button.workspage__button.workspage__button-submit( type='submit') Отправить
+						button.workspage__button.workspage__button-reset( type='reset') Очистить
+			
+
 				
 		
 
 
-	include ../common/footer.pug
+		include ../common/footer.pug

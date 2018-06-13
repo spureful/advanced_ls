@@ -63,18 +63,18 @@ p {
 }
 
 .title {
-@include title(#373e42, 3.9375rem )
+@include title(#373e42 )
 }
 
-.title-white {
-@include title(#fff, 3.9375rem )
+.title_white {
+@include title(#fff )
 }
 
-.subtitle{
-	@include title(#373e42, 2.1875rem)
-		
-	}
+.subtitle {
+	@include subtitle(#373e42);
+}
 
-.subtitle-blue {
-	@include title(#455a64, 2.1875rem)
+.subtitle_blue {
+	@include subtitle(#455a64);
+	
 }
