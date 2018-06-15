@@ -7,10 +7,6 @@ var blur = (function() {
       var imgHeight = document.querySelector(".js-blur-background").offsetHeight;
       var posLeft = -wrap.offsetLeft;
       var posTop = -wrap.offsetTop;
-      console.log(imgWidth);
-      console.log(imgHeight);
-      console.log(posLeft);
-      console.log(posTop);
       var blurCss = cont.style;
       blurCss.backgroundSize = imgWidth + "px" + " " + imgHeight + "px";
       blurCss.backgroundPosition = posLeft + "px" + " " + posTop + "px";}};
