@@ -6,5 +6,5 @@ module.exports = {
   "text-color": "#455a64",
   grey: "#373e42",
   "light-grey": "#dfdcd5",
-	lightgrey: "#aaadaf" 
+  lightgrey: "#aaadaf"
 };

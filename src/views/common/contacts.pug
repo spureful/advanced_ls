@@ -1,0 +1,12 @@
+.contacts
+	.contacts__title
+		h3.subtitle Контакты
+	.contacts__content
+		ul.contacts__list
+			- var contItems = [['skype', 'ann-kd', 'skype:ann-kd'], ['envelope', 'rw1zz@yandex.ru', 'mailto:rw1zz@yandex.ru'], ['phone', '+7 904 559 73 77', 'tel:+79045597377'], ['map_marker', 'г.Санкт-Петербург, ул. Инская, д. 5', '#']]
+				each contItem in contItems
+					li.contacts__item
+						.contacts__icon
+							+icon (`${contItem[0]}`, 'contacts__icon-svg')
+						a.contacts__contact(href=`${contItem[2]}`)
+							.contacts__contact-text #{contItem[1]}

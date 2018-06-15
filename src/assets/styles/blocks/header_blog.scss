@@ -25,9 +25,18 @@
 }
 
 .header__title_blog {
-	@include title(#fff, 3.94rem);
+	@include title(#fff);
 	padding-top: 20px;
 	
+	
+	&:before {
+		top: 55%;
+		left: -40%;
+	}
+	&:after {
+		top: 55%;
+		right: -40%;
+	}
 	
 }
 

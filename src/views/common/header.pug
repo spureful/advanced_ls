@@ -1,3 +1,4 @@
+
 header.header
 	div(class=`${containerHeader}`)
 		.header__row
@@ -5,8 +6,10 @@ header.header
 				- var SocialItems = [['', 'https://vk.com/spureful', 'vk'],['', 'https://github.com/spureful', 'github'],['','#', 'in']]
 					+socials(SocialItems)
 			.header__row-right
-				button(type='button').hamburgermenu.js__hamburgermenu
-					.hamburgermenu__item
+				include hamburgermenu.pug
+
+						
+					
 			
 		div(class=`${headerMainBg}`)
 			.header__img

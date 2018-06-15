@@ -30,11 +30,12 @@
 	}
 }
 
-@mixin title($titleColor, $fontsize) {
+@mixin title($titleColor) {
 	font-family: bernier, arial, sans-serif;
-	font-size: $fontsize;
+	font-size: 3.9375rem;
 	color: $titleColor;
  
+	display: inline;
 
 	position: relative;
 
@@ -48,16 +49,49 @@
 		background-color: rgba($titleColor, 0.2);
 
 		position: absolute;
-		top: 50%;
+		top: 2.5rem;
 
 	}
 
 	&:before {
-		left: 10%;
+		left: -2.5rem;
 	}
 
 
 	&:after {
-		right: 10%;
+		right: -2.5rem;
+	}
+}
+
+@mixin subtitle($titleColor) {
+	font-family: bernier, arial, sans-serif;
+	font-size: 2.1875rem;
+	color: $titleColor;
+ 
+	display: inline;
+
+	position: relative;
+
+
+	&:before,
+	&:after {
+		content: '';
+		display: block;
+		width: 23px;
+		height: 6px;
+		background-color: rgba($titleColor, 0.2);
+
+		position: absolute;
+		top: 1.2rem;
+
+	}
+
+	&:before {
+		left: -2.5rem;
+	}
+
+
+	&:after {
+		right: -2.5rem;
 	}
 }

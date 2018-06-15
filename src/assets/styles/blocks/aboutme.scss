@@ -63,8 +63,13 @@
 	background-size: 100%;
 	padding: 0 2rem;
 
+	&:before {
+		left: -4%;
+	}
 
-
+	&:after {
+		right: -4%;
+	}
 }
 
 .aboutme__person {
@@ -82,17 +87,7 @@
 	margin-bottom: 2rem;
 }
 
-.subtitle-blue_aboutme{
-	
-	&:before {
-		left: 25%;
-	}
 
-
-	&:after {
-		right: 25%;
-	}
-}
 
 
 .aboutme__content-text {
@@ -122,15 +117,10 @@
 .subtitle-blue_skills {
 	
 
-	&:before {
-		left: -10%;
-		top: 25%;
-	}
-
 
 	&:after {
-		right: -10%;
-		top: 25%;
+		right: -4rem;
+	
 	}
 
 }
@@ -141,71 +131,4 @@
 
 .aboutme__skills-content {
 	margin-bottom: 3.44rem;
-}
-
-.map {
-	background-image: url(../assets/images/about/map.jpg);
-	background-size: cover;
-	position: relative;
-	height: 100vh;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	align-items: flex-end;
-
-}
-
-.contacts {
-	@include card;
-	padding: 2.1875rem;
-}
-
-.contacts__title {
-	text-align: center;
-	margin-bottom: 1.8rem;
-}
-
-
-
-.contacts__list {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-direction: column;
-}
-
-.contacts__item {
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-
-	margin-bottom: 1.625rem;
-
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
-
-.contacts__icon {
-	margin-right: 0.625rem;
-}
-
-.contacts__icon-svg {
-	width: 25px;
-	height: 25px;
-	fill: #00bea4;
-}
-
-.contacts__contact {
-	text-decoration: none;
-}
-.contacts__contact-text {
-	color: rgba(#455a64, 0.8);
-	font-weight: 500;
 }
