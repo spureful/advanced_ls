@@ -137,7 +137,7 @@
 	background-image: url(../assets/images/about/map.jpg);
 	background-size: cover;
 	position: relative;
-	height: 100vh;
+	
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -145,6 +145,11 @@
 	display: flex;
 	align-items: flex-end;
 
+	
+}
+
+.map__container {
+	height: 100vh;
 }
 
 .contacts {

@@ -189,15 +189,17 @@
 .workspage__about {
 	background-image: url(../assets/images/works/bg.jpg);
 	background-repeat: no-repeat;
-	background-size: cover; //	height: 100vh;
+	background-size: 100% 100%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	flex-direction: column; //	justify-content: space-between;
+	flex-direction: column; 
 	align-items: center;
 	position: relative;
+	  
+	
 }
 
 .workspage__about-title {
@@ -314,10 +316,11 @@
 .workspage__form-container {
 	margin-bottom: 9.75rem;
 	width: 23.6875rem;
+	height: 28.4875rem;
 	border-radius: 5px;
 	overflow: hidden;
 	
-	
+	position: relative;
 
 }
 
@@ -325,20 +328,29 @@
 	width: 100%;
 	height: 100%;
 
-	text-align: center;
-
 	
-	background: url(../assets/images/works/bg.jpg) center no-repeat;
+	
+	background: url(../assets/images/works/bg.jpg) no-repeat;
 	background-size: 0;
 	background-position: 0 0;
-//	filter: blur(5px);
+	filter: blur(5px);
 	
 	
 }
 
 
 
+.workspage__form-form {
+	text-align: center;
+	width: 23.6875rem;
+	position: absolute;
+	top: 0;
+	left:0;
+
+}
+
 .workspage__form-title {
+	padding-top: 1.9375rem;	
 	margin-bottom: 1.9375rem;
 }
 
