@@ -1,0 +1,28 @@
+section.aboutme
+    .aboutme__bg
+        svg(viewBox="0 0 100 100" preserveAspectRatio="none").aboutme__bg-left
+          polyline(points='0,40 0,0 100,40 ')
+        svg(viewBox="0 0 100 100" preserveAspectRatio="none").aboutme__bg-right
+          polyline(points='0,40 100,0 100,40 ')
+    .aboutme__column-left
+      
+     
+      .aboutme__title
+        h2.title.title_aboutme Обо мне
+      .aboutme__person
+        .aboutme__avatar
+          +image('about/avatar.jpg', 'Фото', 'aboutme__avatar-img')
+        .aboutme__content
+          .aboutme__content-title
+            h3.subtitle_blue Кто я
+          .aboutme__content-text
+            p Я веб разработчик из Санкт-Петербурга. Мне 32 года. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделала в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите,как тут всё классно и красиво!
+		  
+    .aboutme__column-right
+      .aboutme__skills
+        h3.subtitle_blue.subtitle-blue_skills Чем я могу быть вам полезна
+      .aboutme__skills-content
+        .aboutme__skills-text Больше всего меня привлекет Frontend разработка, но я также знакома и могу решать несложные задачи на Backend. Но давайте по порядку.
+      .aboutme__skills-block
+        include ../common/skills.pug
