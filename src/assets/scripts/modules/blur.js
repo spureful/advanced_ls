@@ -10,10 +10,9 @@ var blur = (function() {
       var blurCss = cont.style;
       blurCss.backgroundSize = imgWidth + "px" + " " + imgHeight + "px";
       blurCss.backgroundPosition = posLeft + "px" + " " + posTop + "px";}};
-}() );
+})();
 blur.set();
 
 window.onresize = function() {
   blur.set();
 };
-
