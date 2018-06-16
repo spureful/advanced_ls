@@ -102,10 +102,15 @@
 	background-color: #b9b8b4;
 }
 
+
+
 .slider__slidedown {
 
 	width: 50%;
 	position: relative;
+	transition: 0.5s;
+	
+
 
 	&:before {
 		content: '';
@@ -120,6 +125,9 @@
 		left: 0;
 		top: 0;
 
+		
+			
+		z-index: 100;
 
 	}
 
@@ -132,6 +140,8 @@
 
 	width: 50%;
 	position: relative;
+	transition: 0.5s;
+
 
 	&:before {
 		content: '';
@@ -145,6 +155,8 @@
 		position: absolute;
 		left: 0;
 		top: 0;
+		
+		z-index: 100;
 
 
 	}
@@ -156,4 +168,14 @@
 
 .slider__buttonslide-img {
 	height: 16.4375rem;
+	
+		
+}
+
+.js-slide-down{
+//	transform: translateY(-105%);
+}
+
+.js-slide-up{
+//	transform: translateY(105%);
 }
