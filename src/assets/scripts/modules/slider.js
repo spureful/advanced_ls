@@ -86,4 +86,6 @@ slideBtnDown.addEventListener("click", function() {
   i = 0;
 });
 
-fillSlider();
+if (document.getElementsByClassName("js-slider").length > 0) {
+  fillSlider();
+}

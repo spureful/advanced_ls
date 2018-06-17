@@ -1,7 +1,7 @@
 .welcome {
-	background-image: url(../assets/images/welcome/bg_mountains.jpg);
-	background-repeat: no-repeat;
-	background-size: cover;
+//	background-image: url(../assets/images/welcome/bg_mountains.jpg);
+//	background-repeat: no-repeat;
+//	background-size: cover;
 	
 	width: 100%;
 	height: 100%;
@@ -38,6 +38,12 @@
 	padding: 12px 27px;
 	
 	transition: 0.5s;
+	
+	z-index: 1000;
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	
 	
 	&:hover{
 		background-color: #fff;
