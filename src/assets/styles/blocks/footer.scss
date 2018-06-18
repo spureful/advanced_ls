@@ -1,10 +1,18 @@
 .footer {
 	background-color: rgba(#555b5e, 0.85);
 	width: 100%;
-	
+	@include tablet {
+		//		display: -webkit-flex;
+		//		display: -moz-flex;
+		//		display: -ms-flex;
+		//		display: -o-flex;
+		//		display: flex;
+		//		flex-direction: column;
+	}
+
 }
 
-.footer__row-links{
+.footer__row-links {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -12,13 +20,15 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
-	
+	@include tablet {
+		flex-direction: column;
+	}
+
 }
 
 .footer__menu {
 	padding: 1.875rem 0;
-	
+
 }
 
 .footer__row-content {
@@ -29,19 +39,23 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	
+
 	font-weight: 300;
 	color: rgba(#fff, 0.5);
-	
+
 	.welcome__footer-item:after {
 		background-color: rgba(#fff, 0.5);
+	}
+	
+	@include tablet {
+		flex-direction: column;
 	}
 }
 
 
 .footer__column-left {
 	padding: 1.25rem 0;
-	
+
 	width: 50%;
 	max-width: 510px;
 }

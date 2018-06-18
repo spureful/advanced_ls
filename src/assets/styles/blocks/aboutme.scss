@@ -2,12 +2,21 @@
 
 	min-height: 650px;
 
+}
+
+.aboutme__wrapper {
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	position: relative;
+
+	@include tablet {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 
 .aboutme__bg-left {
@@ -16,6 +25,12 @@
 	fill: #efeee9;
 	position: absolute;
 	top: -20%;
+
+	@include tablet {
+
+		height: 25%;
+		top: -10%;
+	}
 
 }
 
@@ -27,6 +42,12 @@
 	top: -20%;
 	right: 0;
 
+	@include tablet {
+		fill: #efeee9;
+		height: 25%;
+		top: -10%;
+
+	}
 
 }
 
@@ -45,19 +66,32 @@
 	display: -o-flex;
 	display: flex;
 
+	@include netbook {
+
+		padding: 0 3%;
+
+		flex-direction: column;
+		align-items: center;
+
+	}
+
+	@include tablet {
+		width: 100%;
+	}
 }
 
 .aboutme__title {
 	width: 50%;
 	text-align: center;
 	margin-right: 2rem;
+	white-space: nowrap;
 
 
 
 }
 
 .title_aboutme {
-	
+
 
 	background: svg-load('about_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
 	background-size: 100%;
@@ -74,12 +108,34 @@
 
 .aboutme__person {
 	width: 50%;
+
+	@include netbook {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .aboutme__avatar {
 	padding-top: 1rem;
 	margin-bottom: 2rem;
 
+	@include netbook {
+		margin: 0 auto 2rem;
+	}
+
+}
+
+.aboutme__content {
+	@include netbook {
+		width: 80%;
+		text-align: left;
+		margin: 0 auto;
+
+	}
+	
+	@include tablet {
+		width: 50%;
+	}
 }
 
 .aboutme__content-title {
@@ -102,7 +158,13 @@
 	padding: 0 2.5%;
 	width: 50%;
 	background-color: #eeebdf;
-
+	@include tablet {
+		width: 100%;
+	}
+	
+	@include tablet {
+		padding-top: 2.5rem;
+	}
 
 }
 
@@ -115,12 +177,12 @@
 }
 
 .subtitle-blue_skills {
-	
+
 
 
 	&:after {
 		right: -4rem;
-	
+
 	}
 
 }
@@ -131,4 +193,9 @@
 
 .aboutme__skills-content {
 	margin-bottom: 3.44rem;
+	
+	@include tablet {
+		width: 50%;
+		margin: 0 auto 3.44rem;
+	}
 }

@@ -1,14 +1,23 @@
-
-.skills-row__list{
-	margin-bottom: 1.625rem;	
+.skills-list {
+	@include tablet {
+		width: 60%;
+		margin: 0 auto 2.8rem;
+		text-align: center;
+	}
 }
+.skills-row__list {
+	margin-bottom: 1.625rem;
+	
+	
+}
+
 .skills-row__title {
 	color: #455a64;
 	font-weight: 500;
 	font-size: 1.75rem;
 	margin-bottom: 1rem;
-	
-	
+
+
 }
 
 .skills-row__list {
@@ -17,14 +26,25 @@
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-
-
+     
+	@include tablet {
+		justify-content:  center ;
+	}
 }
 
 .skills-row__item {
-	width: 125px;
+	
 	padding: 0;
 	margin-right: 2rem;
+	
+	@include netbook {
+		margin-right: 1rem;
+	}
+    
+	@include tablet {
+		margin-right: 2rem;
+	}
+	
 }
 
 .skill {
@@ -34,6 +54,12 @@
 	position: relative;
 	width: 120px;
 	height: 120px;
+
+	@include netbook {
+		width: 108px;
+		height: 108px;
+
+	}
 }
 
 .skill__title {
@@ -46,6 +72,10 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	
+	@include netbook {
+		font-size: 0.80125rem;
+	}
 }
 
 .skill__figure {
@@ -75,6 +105,7 @@
 .circle- {
 	stroke-dashoffset: 251;
 }
+
 .circle-5 {
 	stroke-dashoffset: 238.45;
 }
@@ -95,7 +126,7 @@
 	stroke-dashoffset: 188.25;
 }
 
- .circle-30 {
+.circle-30 {
 	stroke-dashoffset: 175.7;
 }
 
@@ -135,7 +166,7 @@
 	stroke-dashoffset: 62.75;
 }
 
- .circle-80 {
+.circle-80 {
 	stroke-dashoffset: 50.2;
 }
 
