@@ -2,11 +2,13 @@ extends ../auth.layout.pug
 
 block content
 	.welcome
+		include ../common/parallax.pug
 		.welcome__header
 			button(type="button" class="autorise-btn") Авторизоваться
-			
+		
 		.welcome__main
 			include ../common/welcomecard.pug
 		include ../common/login.pug
 		
 		include ../common/welcomefooter.pug
+		

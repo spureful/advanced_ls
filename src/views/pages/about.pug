@@ -9,14 +9,15 @@ block variables
   - var headerTextClass = 'header__text'
   - var containerHeader = 'container__header'
   - var headerMainBg = 'header__main_portfoliobg'
-
+  - var headerbgtext = 'portfolio'
 
 block scripts
   script(src='js/about.bundle.js')
 
 block arrow
   .header__arrow-block
-    include ../common/headerarrow.pug
+  	a.header__arrow-link(href="#")
+    	include ../common/headerarrow.pug
 
 block content
   include ../common/aboutme.pug

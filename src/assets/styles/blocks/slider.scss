@@ -7,27 +7,24 @@
 
 .slider__container {
 
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
+	display: grid;
+	grid-template: "info mainslide" 70% "info buttons" 30% / 1fr 1fr;
 
-	height: 100%;
+	height: 100vh;
 }
 
 .slider__info {
-	width: 50%;
+
 	text-align: center;
 	margin: auto;
+	grid-area: info;
 
 }
 
-.slider__info-container {
-	margin: 0 auto;
-	width: 50%;
-}
-
+//.slider__info-container {
+//	margin: 0 auto;
+//	
+//}
 .slider__info-title {
 	margin-bottom: 2.4rem;
 }
@@ -79,25 +76,12 @@
 	}
 }
 
-.slider__slides {
-
-	background-color: #efebe0;
-	width: 50%;
-	height: 100%;
-
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	flex-direction: column;
-}
 
 .slider__mainslide {
-
-	height: 32.875rem;
+	background-color: #efebe0;
+	//	height: 32.875rem;
 	text-align: center;
-
+	grid-area: mainslide;
 }
 
 .slider__mainslide-img {
@@ -109,20 +93,24 @@
 .slider__buttons {
 
 	overflow: hidden;
-	height: 20%;
-
-
+	grid-area: buttons;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
+	background-color: #b9b8b4;
 }
+
+
 
 .slider__slidedown {
 
 	width: 50%;
 	position: relative;
+	transition: 0.5s;
+	
+
 
 	&:before {
 		content: '';
@@ -137,7 +125,14 @@
 		left: 0;
 		top: 0;
 
+		
+			
+		z-index: 100;
 
+	}
+
+	&:hover:before {
+		background-color: rgba(#a6a39b, 0.8);
 	}
 }
 
@@ -145,6 +140,8 @@
 
 	width: 50%;
 	position: relative;
+	transition: 0.5s;
+
 
 	&:before {
 		content: '';
@@ -153,17 +150,32 @@
 		width: 100%;
 		height: 100%;
 
-		background: rgba(#a6a39b, 0.8) svg-load('portf_arrow_up.svg', fill=#fff) center center no-repeat;
+		background: rgba(#b9b8b4, 0.8) svg-load('portf_arrow_up.svg', fill=#fff) center center no-repeat;
 
 		position: absolute;
 		left: 0;
 		top: 0;
+		
+		z-index: 100;
 
 
+	}
+	&:hover:before {
+		background-color: rgba(#a6a39b, 0.8);
 	}
 
 }
 
 .slider__buttonslide-img {
 	height: 16.4375rem;
+	
+		
+}
+
+.js-slide-down{
+//	transform: translateY(-105%);
+}
+
+.js-slide-up{
+//	transform: translateY(105%);
 }
