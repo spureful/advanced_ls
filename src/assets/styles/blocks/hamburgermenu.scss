@@ -5,9 +5,15 @@
 	cursor: pointer;
 
 	background: none;
+	
+	@include tablet {
+		height: 2.375rem;
+	}
 
-
-
+	@include phone {
+		width: 1.75rem;
+		height: 1.75rem;
+	}
 }
 
 .hamburgermenu__btn {
@@ -31,6 +37,11 @@
 	top: 50%;
 	padding: 0;
 
+	@include phone {
+		width: 1.75rem;
+		height: 0.25rem;
+	}
+
 	&:before,
 	&:after {
 		content: '';
@@ -42,6 +53,12 @@
 
 		border-radius: 3px;
 		position: absolute;
+
+		@include phone {
+			width: 1.75rem;
+			height: 0.25rem;
+
+		}
 
 	}
 	&:before {
@@ -74,7 +91,7 @@
 	display: flex;
 	flex-direction: column;
 
-		display: none;
+	display: none;
 	&_visible {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -119,7 +136,7 @@
 }
 
 .hamburgermenu__menu {
-//	flex: 1;
+	//	flex: 1;
 	margin: auto;
 }
 
@@ -138,11 +155,12 @@
 		opacity: 0;
 		transition: 0.5s;
 
-			}
+	}
 
-	&:hover:before, &:hover:after {
-			opacity: 1;
-			
-		}
+	&:hover:before,
+	&:hover:after {
+		opacity: 1;
+
+	}
 
 }

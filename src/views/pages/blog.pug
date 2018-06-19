@@ -14,12 +14,19 @@ block variables
 block scripts
   script(src='js/blog.bundle.js')
 
+block arrow
+  .header__arrow-block
+    a.header__arrow-link(href="#")
+      include ../common/headerarrow.pug
   
 block content
+  
+  
   include ../common/figure.pug
   .maincontent_blog
     
     aside.titlesarticles
       +articleTitles(artTitles)
+      button.titlesarticles__button.js-titlesarticles-btn(type = "button")
     include ../common/articles.pug
   include ../common/footer.pug

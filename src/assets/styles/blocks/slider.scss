@@ -11,13 +11,27 @@
 	grid-template: "info mainslide" 70% "info buttons" 30% / 1fr 1fr;
 
 	height: 100vh;
+
+	@include tablet {
+		grid-template: "mainslide" 40% "info" 35% "buttons" 25% / 1fr;
+
+	}
+	
+	@include phone {
+		grid-template: "mainslide" 40% "info" 40% "buttons" 20% / 100%;
+
+	}
+	
 }
 
 .slider__info {
 
 	text-align: center;
 	margin: auto;
+	padding: 3.125rem 0;
 	grid-area: info;
+
+	@include tablet {}
 
 }
 
@@ -78,8 +92,7 @@
 
 
 .slider__mainslide {
-	background-color: #efebe0;
-	//	height: 32.875rem;
+	background-color: #efebe0; //	height: 32.875rem;
 	text-align: center;
 	grid-area: mainslide;
 }
@@ -109,7 +122,7 @@
 	width: 50%;
 	position: relative;
 	transition: 0.5s;
-	
+
 
 
 	&:before {
@@ -125,8 +138,8 @@
 		left: 0;
 		top: 0;
 
-		
-			
+
+
 		z-index: 100;
 
 	}
@@ -155,7 +168,7 @@
 		position: absolute;
 		left: 0;
 		top: 0;
-		
+
 		z-index: 100;
 
 
@@ -168,14 +181,14 @@
 
 .slider__buttonslide-img {
 	height: 16.4375rem;
-	
-		
+
+
 }
 
-.js-slide-down{
-//	transform: translateY(-105%);
+.js-slide-down {
+	//	transform: translateY(-105%);
 }
 
-.js-slide-up{
-//	transform: translateY(105%);
+.js-slide-up {
+	//	transform: translateY(105%);
 }

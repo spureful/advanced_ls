@@ -14,6 +14,10 @@ block variables
 block scripts
 	script(src='js/works.bundle.js')
 
+block arrow
+	.header__arrow-block
+		a.header__arrow-link(href="#")
+			include ../common/headerarrow.pug
 
 block content
 	.workspage
@@ -24,6 +28,7 @@ block content
 		
 		include ../common/slider.pug
 		include ../common/aboutworks.pug
+		include ../common/arrowup.pug
 
 						
 		

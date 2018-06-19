@@ -6,6 +6,8 @@
 	left: 0;
 	top: 0;
 	overflow: hidden;
+	
+	
 
 }
 
@@ -24,30 +26,46 @@
 }
 
 .parallax__layer_2 {
-	top: 20%;
+	top: 35%;
 	right: -5%;
 	max-height: 85%;
 	width: 110%;
 
-
+	@include tablet {
+		top: 40%;
+	}
+	@include phone {
+		top: 50%;
+	}
 }
 
 .parallax__layer_3 {
-	top: 25%;
+	top: 30%;
 	right: -5%;
 	max-height: 78%;
 	width: 110%;
 
-
+@include tablet {
+		top: 40%;
+	}
+	@include phone {
+		top: 50%;
+	}
 }
 
 .parallax__layer_4 {
-	top: 10%;
+	top: 25%;
 	left: 0%;
 	max-height: 100%;
-	width: 50%;
+	width: 40%;
 
-
+@include tablet {
+		top: 30%;
+	}
+	
+	@include phone {
+		top: 70%;
+	}
 }
 
 .parallax__layer_5 {
@@ -65,11 +83,14 @@
 	width: 80%;
 	height: 35%;
 
-
+@include phone {
+		bottom: 0%;
+	    width: 100%;
+	}
 }
 
 .parallax__layer_7 {
-	top: 30%;
+	top: 35%;
 	right: 5%;
 	max-height: 25%;
 	max-width: 35%;

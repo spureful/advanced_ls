@@ -38,6 +38,10 @@
 
 	padding: 1.875rem 2rem 0;
 	
+	@include phone {
+		top:0;
+		padding: 0.5625rem;;
+	}
 }
 
 
@@ -145,6 +149,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	
+	@include phone {
+		text-align: center;
+	}
 }
 
 .header__arrow-icon {

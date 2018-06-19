@@ -1,13 +1,11 @@
 .footer {
 	background-color: rgba(#555b5e, 0.85);
 	width: 100%;
-	@include tablet {
-		//		display: -webkit-flex;
-		//		display: -moz-flex;
-		//		display: -ms-flex;
-		//		display: -o-flex;
-		//		display: flex;
-		//		flex-direction: column;
+	
+	@include phone {
+		font-size: 0,8125;
+	
+		
 	}
 
 }
@@ -48,7 +46,14 @@
 	}
 	
 	@include tablet {
+		width: 100%;
 		flex-direction: column;
+		align-content: stretch;
+	}
+	
+	@include phone {
+		font-size: 0.8125rem;
+		text-align: center;
 	}
 }
 
@@ -58,6 +63,12 @@
 
 	width: 50%;
 	max-width: 510px;
+	
+	@include tablet {
+		
+		width: 100%;
+		
+	}	
 }
 
 .footer__line {

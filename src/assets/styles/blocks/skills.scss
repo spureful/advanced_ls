@@ -16,6 +16,10 @@
 	font-weight: 500;
 	font-size: 1.75rem;
 	margin-bottom: 1rem;
+	
+	@include phone {
+		font-size: 1.30875rem;
+	}
 
 
 }
@@ -30,6 +34,11 @@
 	@include tablet {
 		justify-content:  center ;
 	}
+	 
+	@include phone {
+	display: inline-block;
+	}
+	
 }
 
 .skills-row__item {
@@ -37,12 +46,17 @@
 	padding: 0;
 	margin-right: 2rem;
 	
+	&:last-child {
+		margin-right: 0;
+	}
+	
 	@include netbook {
 		margin-right: 1rem;
 	}
     
-	@include tablet {
-		margin-right: 2rem;
+	@include phone {
+	display: inline-block;
+		margin-bottom: 1.5rem;
 	}
 	
 }

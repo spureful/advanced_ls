@@ -78,6 +78,9 @@
 	@include tablet {
 		width: 100%;
 	}
+
+
+
 }
 
 .aboutme__title {
@@ -85,6 +88,9 @@
 	text-align: center;
 	margin-right: 2rem;
 	white-space: nowrap;
+
+
+
 
 
 
@@ -99,10 +105,23 @@
 
 	&:before {
 		left: -4%;
+		@include phone {
+			left: -10%;
+			top: 1.3rem;
+		}
 	}
 
 	&:after {
 		right: -4%;
+		@include phone {
+			right: -10%;
+			top: 1.3rem;
+		}
+	}
+
+	@include phone {
+		padding: 0 1.2rem;
+
 	}
 }
 
@@ -132,9 +151,13 @@
 		margin: 0 auto;
 
 	}
-	
+
 	@include tablet {
 		width: 50%;
+	}
+
+	@include phone {
+		width: 100%;
 	}
 }
 
@@ -152,6 +175,8 @@
 	p {
 		margin-bottom: 1rem;
 	}
+
+
 }
 
 .aboutme__column-right {
@@ -161,7 +186,7 @@
 	@include tablet {
 		width: 100%;
 	}
-	
+
 	@include tablet {
 		padding-top: 2.5rem;
 	}
@@ -174,6 +199,8 @@
 	padding: 0 2rem;
 	margin: 0 auto;
 	margin-bottom: 1rem;
+
+
 }
 
 .subtitle-blue_skills {
@@ -182,8 +209,12 @@
 
 	&:after {
 		right: -4rem;
+		@include phone {
+			right: -2rem;
+		}
 
 	}
+
 
 }
 
@@ -193,9 +224,12 @@
 
 .aboutme__skills-content {
 	margin-bottom: 3.44rem;
-	
+
 	@include tablet {
 		width: 50%;
 		margin: 0 auto 3.44rem;
+	}
+	@include phone {
+		width: 100%;
 	}
 }
