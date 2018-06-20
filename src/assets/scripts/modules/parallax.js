@@ -11,10 +11,10 @@ const parallax = (function() {
         positionY = event.pageY / -speed + "px";
         parallaxLayer[i].style.transform = "translate3d(" + positionX + "," + positionY + ",0)";
         speed -= 20;
-        console.log("pageX");
+        
       }
     }
-  }
+ }
 	
 }) ();
 

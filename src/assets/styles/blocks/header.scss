@@ -9,6 +9,8 @@
 	min-height: 650px;
 
 	position: relative;
+	
+	clip-path: polygon(0 0, 0 80%, 50% 100%, 100% 80%, 100% 0);
 
 
 }
@@ -21,6 +23,8 @@
 	top: 0;
 	left: 0;
 	overflow: hidden;
+	
+	  	
 }
 
 

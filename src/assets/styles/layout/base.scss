@@ -1,8 +1,8 @@
 body,
 html {
 	height: 100%;
-	
-	
+
+
 	@include phone {
 		min-width: 320px;
 	}
@@ -16,7 +16,7 @@ body {
 	color: $text-color;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	
+
 	@include phone {
 		font-size: 14px;
 	}
@@ -34,7 +34,7 @@ body {
 	display: flex;
 	flex-direction: column;
 
-	
+
 }
 
 .header,
@@ -45,6 +45,7 @@ body {
 .maincontent {
 	flex: 1 0 auto;
 	position: relative;
+
 }
 
 .container {
@@ -85,21 +86,21 @@ p {
 
 .title {
 	@include title(#373e42);
-	
+
 }
 
 .title_white {
 	@include title(#fff);
-	
+
 }
 
 .subtitle {
 	@include subtitle(#373e42);
-	
+
 }
 
 .subtitle_blue {
 	@include subtitle(#455a64);
-	
+
 
 }

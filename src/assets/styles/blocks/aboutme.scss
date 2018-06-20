@@ -1,3 +1,10 @@
+.wrapper_aboutpage {
+	background: linear-gradient( #efeee9 ,  #eeebdf 50%);
+	
+	@include tablet {
+		background: #efeee9;
+	}
+}
 .aboutme {
 
 	min-height: 650px;
@@ -19,46 +26,14 @@
 	}
 }
 
-.aboutme__bg-left {
-	width: 50%;
-	height: 50%;
-	fill: #efeee9;
-	position: absolute;
-	top: -20%;
-
-	@include tablet {
-
-		height: 25%;
-		top: -10%;
-	}
-
-}
-
-.aboutme__bg-right {
-	width: 50%;
-	height: 50%;
-	fill: #eeebdf;
-	position: absolute;
-	top: -20%;
-	right: 0;
-
-	@include tablet {
-		fill: #efeee9;
-		height: 25%;
-		top: -10%;
-
-	}
-
-}
 
 .aboutme__column-left {
 	width: 50%;
 
-
 	background-color: #efeee9;
 
-
-	padding: 0 5%;
+	
+	padding:0 5%;
 
 	display: -webkit-flex;
 	display: -moz-flex;
@@ -180,6 +155,9 @@
 }
 
 .aboutme__column-right {
+
+
+	
 	padding: 0 2.5%;
 	width: 50%;
 	background-color: #eeebdf;
