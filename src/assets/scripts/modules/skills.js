@@ -24,7 +24,7 @@
 //function skillsPercents() {
 //  for (let i = 0; i < skills.length; i++) {
 //    skillGroupTitle[i].innerText = skills[i].titleGruop;
-//    
+//
 //  }
 //}
 //
