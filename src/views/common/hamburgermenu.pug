@@ -6,12 +6,11 @@
 	.hamburgermenu__rightdoor
 	.hamburgermenu__block.js-menu
 		
-		
 		button.hamburgermenu-closebtn.js-closemenu
 			.hamburgermenu-closebtn-item
 		.hamburgermenu__menu
 		
 			ul.hamburgermenu__list
 				each hambItem in hambItems
-					li.hamburgermenu__menuitem
+					li.hamburgermenu__menuitem.js-menu-items
 						a.hamburgermenu__link.title.title_hamburgermenu(href=`${hambItem[1]}`) #{hambItem[0]}

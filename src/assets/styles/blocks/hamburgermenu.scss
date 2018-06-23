@@ -81,7 +81,7 @@
 }
 
 .hamburgermenu__block {
-	background-color: rgba($green, 0.87);
+
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -109,7 +109,7 @@
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
-		opacity: 0;
+		
 	}
 }
 
@@ -160,7 +160,7 @@
 .title_hamburgermenu {
 	color: #fff;
 	text-decoration: none;
-
+   
 	&:before,
 	&:after {
 		background-color: rgba(#fff, 0.8);
@@ -174,21 +174,17 @@
 		opacity: 1;
 
 	}
-
+	
 }
 
 .hamburgermenu__leftdoor {
 	position: fixed;
 	top: 0;
-	left: 0%;
-	width: 50%;
+	left: 0;
+	width: 0;
 	height: 100%;
 	background-color: rgba($green, 0.87);
-	transform: translateX(-100%);
-	display: none;
-	&_active {
-		display: block;
-	}
+	transition: 1.3s;
 	
 }
 
@@ -196,12 +192,12 @@
 	position: fixed;
 	top: 0;
 	right: 0;
-	width: 50%;
+	width:0;
 	height: 100%;
 	background-color: rgba($green, 0.87);
-	transform: translateX(100%);
-	display: none;
-	&_active {
-		display: block;
+	transition: 1.3s;
+	
+	
 	}
-}
+
+

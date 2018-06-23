@@ -56,7 +56,7 @@
 	}
     
 	@include phone {
-//	margin-right: 0;
+
 		margin-bottom: 1.5rem;
 	}
 	
@@ -114,91 +114,7 @@
 	stroke: $green;
 	stroke-dasharray: 251;
 	stroke-dashoffset: 251;
+	transition: 1.5s;
 }
 
 
-.circle- {
-	stroke-dashoffset: 251;
-}
-
-.circle-5 {
-	stroke-dashoffset: 238.45;
-}
-
-.circle-10 {
-	stroke-dashoffset: 225.9;
-}
-
-.circle-15 {
-	stroke-dashoffset: 213.35;
-}
-
-.circle-20 {
-	stroke-dashoffset: 200.8;
-}
-
-.circle-25 {
-	stroke-dashoffset: 188.25;
-}
-
-.circle-30 {
-	stroke-dashoffset: 175.7;
-}
-
-.circle-35 {
-	stroke-dashoffset: 163.15;
-}
-
-.circle-40 {
-	stroke-dashoffset: 150.06;
-}
-
-.circle-45 {
-	stroke-dashoffset: 138.05;
-}
-
-.circle-50 {
-	stroke-dashoffset: 125.5;
-}
-
-.circle-55 {
-	stroke-dashoffset: 112.95;
-}
-
-.circle-60 {
-	stroke-dashoffset: 100.4;
-}
-
-.circle-65 {
-	stroke-dashoffset: 87.85;
-}
-
-.circle-70 {
-	stroke-dashoffset: 75.3;
-}
-
-.circle-75 {
-	stroke-dashoffset: 62.75;
-}
-
-.circle-80 {
-	stroke-dashoffset: 50.2;
-}
-
-.circle-85 {
-	stroke-dashoffset: 37.65;
-}
-
-.circle-90 {
-	stroke-dashoffset: 25.1;
-}
-
-.circle-95 {
-	stroke-dashoffset: 12.55;
-}
-
-.circle-100 {
-	stroke-dashoffset: 0;
-}
-
-//12.55 - каждые 5%
