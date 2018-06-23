@@ -40,7 +40,8 @@ const skill = {
   template: "#skills-row-item",
   props: {
 	titleSkills: String,
-    skillPercents: Number
+    skillPercents: Number,
+	 
   },
   methods: {
     drawCircle() {
@@ -50,15 +51,28 @@ const skill = {
 	  );
       const persents =(dash/100) * (100 - this.skillPercents);
 	 
-      circle.style.strokeDashoffset = persents;
-		
-	  	}
-  },
-  mounted() {
+
+	 window.addEventListener("scroll", function() { 
 	
+    const posTop = circle.getBoundingClientRect().top;
+	const exactTop = posTop.toFixed();
+	console.log(exactTop);	
+     if (exactTop > 300 && exactTop < 600) {
+
+		  circle.style.strokeDashoffset = persents;	
+	 }
+		 
+    
+	})
+  }
+  },
+ 
+  mounted() {
+//	this.$root.$options.methods.findblock();
     this.drawCircle();
   }  
 };
+
 const skillsRow = {
   template: "#skills-row",
   components: {
@@ -84,27 +98,26 @@ new Vue({
   },
 	
   template: "#skills-section", 
+ 
   methods: {
- findblock() {	 
+    findblock() {	 
      const skillBlock = this.$refs["skills-block"];
-  
-    window.onscroll = function() {
-    const posTop = skillBlock.getBoundingClientRect().top
-	const fff = skillBlock.offsetTop;
-    const exactTop = posTop.toFixed();
-    console.log(exactTop);
-	if (exactTop > 200 && exactTop < 210) {
-	  console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaa");
-//		skill.methods.drawCircle();
-		}
-}
-	  
-
+     
+//    window.onscroll = function() {
+//    const posTop = skillBlock.getBoundingClientRect().top;
+//	const exactTop = posTop.toFixed();
+//		
+//    if (exactTop > 200 && exactTop < 215) {
+//		console.log("done")
+//	}
+//	
+//    }
+	
   }
-  },
+ },
 	
   mounted() {
-	  this.findblock();
+//	  this.findblock();
   }
  
 
