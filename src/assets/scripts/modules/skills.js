@@ -97,28 +97,8 @@ new Vue({
    
   },
 	
-  template: "#skills-section", 
- 
-  methods: {
-    findblock() {	 
-     const skillBlock = this.$refs["skills-block"];
-     
-//    window.onscroll = function() {
-//    const posTop = skillBlock.getBoundingClientRect().top;
-//	const exactTop = posTop.toFixed();
-//		
-//    if (exactTop > 200 && exactTop < 215) {
-//		console.log("done")
-//	}
-//	
-//    }
-	
-  }
- },
-	
-  mounted() {
-//	  this.findblock();
-  }
+  template: "#skills-section" 
+
  
 
   });
