@@ -4,11 +4,10 @@ header.header
 	div(class=`${containerHeader}`)
 		
 		.header__row
-			.header__row-left
-				- var SocialItems = [['', 'https://vk.com/spureful', 'vk'],['', 'https://github.com/spureful', 'github'],['','#', 'in']]
-					+socials(SocialItems)
-			.header__row-right
-				include hamburgermenu.pug
+			- var SocialItems = [['', 'https://vk.com/spureful', 'vk'],['', 'https://github.com/spureful', 'github'],['','#', 'in']]
+				+socials(SocialItems)
+			
+				
 
 						
 					

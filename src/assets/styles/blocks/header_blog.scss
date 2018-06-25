@@ -11,6 +11,14 @@
 	flex-direction: column;
 	justify-content: space-between;
 	
+	
+	.header__arrow-block {
+		display: none;
+		
+		@include tablet {
+			display: block;
+		}
+	}
 }
 
 .header__bgtext-icon_blog {
@@ -41,11 +49,20 @@
 	&:before {
 		top: 55%;
 		left: -40%;
+		
+		@include phone {
+		left: -60%;
+	}
 	}
 	&:after {
 		top: 55%;
 		right: -40%;
+		
+		@include phone {
+			right: -60%;
 	}
+	}
+	
 	
 }
 
