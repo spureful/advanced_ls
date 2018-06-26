@@ -46,6 +46,7 @@ const skill = {
   methods: {
     drawCircle() {
 	  const circle = this.$refs["color-circle"];
+	  let findBlckTop = this.$root.findCircle();
 	  const dash = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
 	  );
@@ -54,9 +55,9 @@ const skill = {
 
 	 window.addEventListener("scroll", function() { 
 	
-    const posTop = circle.getBoundingClientRect().top;
+    const posTop = findBlckTop.findTop.getBoundingClientRect().top;
 	const exactTop = posTop.toFixed();
-    if (exactTop > 300 && exactTop < 600) {
+    if (exactTop > 300 && exactTop < 350) {
 
 		  circle.style.strokeDashoffset = persents;	
 	 }
@@ -96,7 +97,16 @@ new Vue({
    
   },
 	
-  template: "#skills-section" 
+  template: "#skills-section",
+	
+  methods: {
+	findCircle() {
+	let circleBlock = this.$refs["skills-block"]; 
+	 return {
+	   findTop: circleBlock
+		};
+	  }
+  }
 
  
 
