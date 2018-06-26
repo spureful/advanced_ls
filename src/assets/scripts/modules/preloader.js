@@ -1,6 +1,5 @@
 export default function preloader() {
   const imgs = document.images;
-  console.log(imgs);
   const img_total_count = imgs.length;
   let img_loaded_count = 0;
   const preloaderBlock = document.querySelector(".js-preloader");
@@ -47,4 +46,6 @@ export default function preloader() {
 	
 };
 
+if (document.getElementsByClassName("preloader").length > 0) {
 preloader();
+}

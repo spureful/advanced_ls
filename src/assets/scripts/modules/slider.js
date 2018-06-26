@@ -1,21 +1,21 @@
 const sliderContent = [
   {
     title: "Сайт Авиакомпании AirPlanet",
-    image: "../assets/images/works/work_1.png",
+    image: "assets/images/works/work_1.png",
     tags: ["html ", "css"],
     link: "https://spureful.github.io/project_ls_1/"
   },
 
   {
     title: "Лендинг магазина бургеров",
-    image: "../assets/images/works/work_2.png",
+    image: "assets/images/works/work_2.png",
     tags: ["html ", "css ", "js ", "gulp"],
     link: "https://spureful.github.io/project_burgers/build/"
   },
 
   {
     title: "сайт-портфолио",
-    image: "../assets/images/works/work_3.png",
+    image: "assets/images/works/work_3.png",
     tags: ["html ", "css ", "js ", "gulp ", "webpack"],
     link: "https://spureful.github.io/advanced_ls/dist/"
   }

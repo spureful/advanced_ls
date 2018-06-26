@@ -13,6 +13,8 @@ var blur = (function() {
 })();
 blur.set();
 
+if (document.getElementsByClassName("js-blur-wrap").length > 0) {
 window.onresize = function() {
   blur.set();
 };
+}

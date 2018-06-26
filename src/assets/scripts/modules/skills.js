@@ -56,8 +56,7 @@ const skill = {
 	
     const posTop = circle.getBoundingClientRect().top;
 	const exactTop = posTop.toFixed();
-	console.log(exactTop);	
-     if (exactTop > 300 && exactTop < 600) {
+    if (exactTop > 300 && exactTop < 600) {
 
 		  circle.style.strokeDashoffset = persents;	
 	 }
@@ -68,7 +67,7 @@ const skill = {
   },
  
   mounted() {
-//	this.$root.$options.methods.findblock();
+
     this.drawCircle();
   }  
 };

@@ -1,30 +1,19 @@
 .login {
 	@include card;
-width: 382px;
-//	height: 400px;
-
-
-transform: rotateY(180deg);
+	width: 382px;
+    backface-visibility: hidden;
+	transition: 1.5s;
+	padding-top: 0;
 }
 
 .login__title {
 	text-align: center;
+	padding: 2rem 0; 
 }
 
 .login__title-txt {
+	
 
-
-	@include title(#455a64, 2.1875rem);
-	margin-bottom: 1rem;
-
-	&:before {
-		left: 9%;
-	}
-
-
-	&:after {
-		right: 9%;
-	}
 
 }
 
@@ -37,7 +26,7 @@ transform: rotateY(180deg);
 	flex-direction: column;
 	align-items: center;
 
-	
+
 	width: 100%;
 
 
@@ -52,10 +41,10 @@ transform: rotateY(180deg);
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-    
-	
+
+
 	width: 95%;
-	margin:0 1rem  0.5rem;
+	margin: 0 1rem 0.5rem;
 }
 
 .form-login__input {
@@ -67,10 +56,10 @@ transform: rotateY(180deg);
 	box-sizing: border-box;
 	border: none;
 	content: '000';
-    
+
 	width: 100%;
 
-	
+
 
 }
 
@@ -133,19 +122,19 @@ transform: rotateY(180deg);
 	margin-bottom: 0.4rem;
 }
 
-.form-login-radio-row{
+.form-login-radio-row {
 	margin-bottom: 2rem;
 	border: 2px soild #000;
 }
 
 .form-login-radio {
 	display: none;
-	
-	&:checked  + .form-login-radio-block .form-login-radio-custom:before {
+
+	&:checked + .form-login-radio-block .form-login-radio-custom:before {
 		opacity: 1;
 	}
-	
-	&:checked  + .form-login-radio-block .form-login-radio-text {
+
+	&:checked + .form-login-radio-block .form-login-radio-text {
 		color: #00bfa5;
 	}
 }
@@ -154,21 +143,22 @@ transform: rotateY(180deg);
 	display: inline-block;
 	margin-right: 2.375rem;
 }
+
 .form-login-radio-custom {
-	
+
 	display: inline-block;
 	vertical-align: middle;
 	width: 20px;
 	height: 20px;
 	background-color: #fff;
-	
+
 	box-sizing: border-box;
 	border: 1px solid #cdcece;
 	border-radius: 50%;
 
 
 	margin-right: 0.56rem;
-	
+
 	position: relative;
 
 	transition: 0.5s;
@@ -186,7 +176,7 @@ transform: rotateY(180deg);
 		left: 50%;
 		transform: translate(-50%, -50%);
 		opacity: 0;
-		
+
 		transition: 0.3s;
 	}
 }
@@ -195,31 +185,31 @@ transform: rotateY(180deg);
 	display: inline-block;
 	vertical-align: middle;
 }
-	
 
-	
+
+
 .form-login-buttons-row {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	
-	
-	
+
+
+
 }
 
-	.form-login-button {
-		@include cardmenu;
-		padding: 0;
-		width: 192px;
-		box-sizing: border-box;
-		padding: 1rem; 	
-		
-		transition: 0.5s;
-		
-		overflow: hidden;
-	}
+.form-login-button {
+	@include cardmenu;
+	padding: 0;
+	width: 192px;
+	box-sizing: border-box;
+	padding: 1rem;
+
+	transition: 0.5s;
+
+	overflow: hidden;
+}
 
 .form-login-button-main {
 	border-bottom-left-radius: 5px;

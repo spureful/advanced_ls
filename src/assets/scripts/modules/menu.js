@@ -1,4 +1,4 @@
-function menuAppear() {
+export default function menuAppear() {
   const openBtn = document.querySelector(".js-openmenu");
   const closeBtn = document.querySelector(".js-closemenu");
   const menuBlock = document.querySelector(".js-menu");
@@ -33,5 +33,6 @@ function menuAppear() {
   });
 }
 
-
+if (document.getElementsByClassName("hamburgermenu").length > 0) {
 menuAppear();
+};

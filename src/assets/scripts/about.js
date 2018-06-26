@@ -1,4 +1,4 @@
 import preloader from "./modules/preloader";
 import "./modules/skills";
 import "./modules/headerparallax";
-import "./modules/menu";
+import menuAppear from "./modules/menu";
