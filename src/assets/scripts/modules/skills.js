@@ -2,10 +2,10 @@ import Vue from "vue";
 
 const skills = [
   {
-    "titleGruop": "Frontend",
-	"skillsCont": {
-      "Html5": 90,
-      "css3": 85,
+    titleGruop: "Frontend",
+    skillsCont: {
+      Html5: 90,
+      css3: 85,
       "javaScript & jQuery": 50
 		 
 	 }
@@ -13,24 +13,22 @@ const skills = [
   },
   {
     titleGruop: "Backend",
-	"skillsCont": {
-      "PHP": 10,
-      "mySQL": 30,
+    skillsCont: {
+      PHP: 10,
+      mySQL: 30,
       "Node.js": 40,
-      "Mongo.db": 50 
+      "Mongo.db": 50
 		 
 	 }
    
   },
   {
     titleGruop: "Workflow",
-	"skillsCont": {
-		"Git": 50,
-		 "Gulp": 30,
-		 "Bower": 20
-		 
-	 }
-  
+    skillsCont: {
+      Git: 50,
+      Gulp: 30,
+      Bower: 20
+    }
   }
 ];
 
@@ -39,38 +37,33 @@ const skills = [
 const skill = {
   template: "#skills-row-item",
   props: {
-	titleSkills: String,
+    titleSkills: String,
     skillPercents: Number,
-	 
+
   },
   methods: {
     drawCircle() {
-	  const circle = this.$refs["color-circle"];
-	  let findBlckTop = this.$root.findCircle();
-	  const dash = parseInt(
+      const circle = this.$refs["color-circle"];
+      let findBlckTop = this.$root.findCircle();
+      const dash = parseInt(
         getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
-	  );
-      const persents =(dash/100) * (100 - this.skillPercents);
-	 
+      );
+      const persents = (dash / 100) * (100 - this.skillPercents);
 
-	 window.addEventListener("scroll", function() { 
-	
-    const posTop = findBlckTop.findTop.getBoundingClientRect().top;
-	const exactTop = posTop.toFixed();
-    if (exactTop > 300 && exactTop < 350) {
+      window.addEventListener("scroll", function() { 
 
-		  circle.style.strokeDashoffset = persents;	
-	 }
-		 
-    
-	})
-  }
+        const posTop = findBlckTop.findTop.getBoundingClientRect().top;
+        const exactTop = posTop.toFixed();
+        if (exactTop > 300 && exactTop < 350) {
+          circle.style.strokeDashoffset = persents;
+        }
+      });
+    }
   },
- 
-  mounted() {
 
+  mounted() {
     this.drawCircle();
-  }  
+  }
 };
 
 const skillsRow = {
@@ -96,18 +89,16 @@ new Vue({
     this.skillscontent = dataSkills;
    
   },
-	
-  template: "#skills-section",
-	
-  methods: {
-	findCircle() {
-	let circleBlock = this.$refs["skills-block"]; 
-	 return {
-	   findTop: circleBlock
-		};
-	  }
-  }
 
- 
+  template: "#skills-section",
+
+  methods: {
+    findCircle() {
+      let circleBlock = this.$refs["skills-block"];
+      return {
+        findTop: circleBlock
+      };
+    }
+  }
 
   });
