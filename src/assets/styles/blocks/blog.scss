@@ -5,20 +5,16 @@
 	display: -o-flex;
 	display: flex;
 
-	justify-content: space-around;
 
 	margin: 0 auto;
 	padding-top: 4.25rem;
-	padding-left: 7.8rem;
-padding-right: 19.5rem;
 
-	
-
+	position: relative;
 	@include netbook {
 		padding-left: 2.1875rem;
 		padding-right: 2%;
 	}
-	
+
 	@include phone {
 		padding: 0.7rem;
 	}
@@ -28,28 +24,28 @@ padding-right: 19.5rem;
 
 .titlesarticles {
 
-	
-	max-width: 272px;
-	width: 100%;
+
+	//	max-width: 272px;
+	width: 30%;
 	text-align: right;
 
 	margin-right: 7.5rem;
 
-	position: relative;
-	
+
+
 	@include netbook {
 		width: 30%;
-	
+
 	}
 
 	@include tablet {
 		position: fixed;
 		top: 0;
 		right: 100%;
-       
+		font-size: 0;
 		z-index: 200;
 
-		width: 100%;
+		width: 50%;
 		height: 100vh;
 		margin-right: 0;
 
@@ -57,20 +53,22 @@ padding-right: 19.5rem;
 		box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.2);
 
 		vertical-align: middle;
-		padding:2rem;
-        
-	
+		padding: 2rem;
+
+
 
 	}
 
 	@include phone {
 		right: 101%;
+		width: 70%;
 	}
-	
+
 	&_active {
 		@include tablet {
 			right: 0;
 			left: 0;
+			font-size: 1rem;
 		}
 	}
 }
@@ -78,17 +76,22 @@ padding-right: 19.5rem;
 
 
 .aricles-titles__list {
-	
-	max-width: 272px;
-	
+
+	position: absolute;
+	top: 75px;
+	right: 75%;
+
 	@include tablet {
 		top: 50px;
+		right: 0;
+		left: 3%;
 	}
-	
-	
+
+
 }
+
 .aricles-titles__item {
-    
+
 	color: #455a64;
 	padding: 0.625rem;
 	padding-right: 1rem;
@@ -130,7 +133,7 @@ padding-right: 19.5rem;
 		z-index: -10;
 
 	}
-	
+
 	@include phone {
 		right: -5%;
 	}

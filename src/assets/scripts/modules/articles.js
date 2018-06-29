@@ -100,14 +100,14 @@ new Vue({
      if (sectionTop < 50 && screen.width > 1010 ) {
 		
 	 asideTitle.style.position = "fixed";
-		asideTitle.style.top = 4.25 + "rem"; 
-		asideTitle.style.left = 7.8 + "rem"; 
-		asideTitle.style.width = 30 + "%"; 
+		asideTitle.style.top = 75  + "px"; 
+
+
 	 }
 		 
      else if (sectionTop > 51 && screen.width > 1010) {
-		 asideTitle.style.position = "static";
-		 asideTitle.style.width = 100 + "%";
+		 asideTitle.style.position = "absolute";
+
 	 }
 		 
      else if (sectionTop < 50 && screen.width < 1010) {
@@ -136,7 +136,7 @@ function drawTitle()  {
 		let exactArticleTop = posArticleTop.toFixed();
 		 
 		
-        if (exactArticleTop < 170 && exactArticleTop > -350  ) {
+        if (exactArticleTop < 345	 && exactArticleTop > -50  ) {
          articleTitle[i].classList.add("aricles-titles__item_active");
         }
 		else {
