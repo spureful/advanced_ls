@@ -1,7 +1,8 @@
-//import preloader from "./modules/preloader";
 import "./modules/blur";
 import "./modules/slider";
+import "./modules/aboutworks-form";
 import "./modules/headerparallax";
+
 import menuAppear from "./modules/menu";
 
 const preloader = (function() {
@@ -46,7 +47,7 @@ const preloader = (function() {
 	for (let j = 0; j < imagesArray.length; j++) {
 	  imagesArray[j].onload = function() {
 		percents += allImages;
-		 console.log(percents.toFixed()); 
+		
 		if (percents < 100) {
 		preloaderText.innerText = percents.toFixed() + "%";
 		}  else {
@@ -69,3 +70,5 @@ const preloader = (function() {
 })();
 
 preloader.show();
+
+

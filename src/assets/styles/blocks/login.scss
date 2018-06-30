@@ -26,7 +26,7 @@
 	flex-direction: column;
 	align-items: center;
 
-
+    position: relative;
 	width: 100%;
 
 
@@ -59,7 +59,9 @@
 
 	width: 100%;
 
-
+	&_error {
+		border: 1px solid red;
+	}
 
 }
 
@@ -73,10 +75,16 @@
 
 .form-login__input-before_login {
 	background: #f0efe9 svg-load('login.svg', fill=#c4cbcd) center center no-repeat;
+	&_error {
+	background: #f0efe9 svg-load('login.svg', fill=red) center center no-repeat;	
+	}
 }
 
 .form-login__input-before_password {
 	background: #f0efe9 svg-load('password.svg', fill=#c4cbcd) center center no-repeat;
+	&_error {
+		background: #f0efe9 svg-load('password.svg', fill=red) center center no-repeat;
+	}
 }
 
 .form-login__checkbox-block {
@@ -217,4 +225,73 @@
 
 .form-login-button-login {
 	border-bottom-right-radius: 5px;
+}	
+
+.js-error-login {
+  position: absolute;
+	padding: 10px 20px;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	
+	transition: 0.7s;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 50%;
+		transform: translateX(50%);
+		top: -12px;
+
+
+		border-right: 12px solid transparent;
+		border-bottom: 14px solid red;
+		border-left: 12px solid transparent;
+	}
+}
+
+.js-error-login_login {
+	top: 45px;
+	display: none;
+}
+.js-error-login_password {
+	z-index: 10;
+	top: 95px;
+	display: none;
+}
+.js-error-login_checkbox {
+	z-index: 10;
+	top: 159px;
+	display: none;
+}
+.js-error-login_radio {
+	top: 236px;
+	display: none;
+}
+
+.js-sucsess-login {
+	display: none;
+	z-index: 200;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	padding: 22px 50px;
+
+	border-radius: 5px;
+}
+.js-sucsess-text {
+	color: #373e42;
+	margin-bottom: 1.3rem;
+}
+.js-suscess-btn {
+	@include cardmenu;
+	border-radius: 5px;
 }
