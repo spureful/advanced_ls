@@ -1,7 +1,7 @@
 .welcomecard {
 	@include card;
+    transition: 1.5s;
 	backface-visibility: hidden;
-	
 	@include phone {
 		width: 300px;
 	}
@@ -112,5 +112,6 @@
 }
 
 .js__rotate-card {
-	backface-visibility: hidden;
+
+	transform: translate(-50%, -50%) rotateY(180deg) perspective(1000px);
 }

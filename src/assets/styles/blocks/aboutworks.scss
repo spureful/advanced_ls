@@ -18,7 +18,7 @@
 	width: 50%;
 	height: 100%;
 	min-height: 12rem;
-	
+
 
 
 	background: svg-load('about_header.svg', fill=rgba(#373e42, 0.07)) center center no-repeat;
@@ -45,7 +45,7 @@
 		&:before,
 		&:after {
 			top: 2rem;
-			
+
 			@include phone {
 				top: 1.2rem;
 			}
@@ -56,7 +56,7 @@
 .aboutworks__quotes {
 	flex: 1;
 	margin-bottom: 4.5rem;
-	
+
 	@include tablet {
 		font-size: 0.875rem;
 	}
@@ -83,14 +83,14 @@
 	margin-right: 1.25rem;
 
 	position: relative;
-	
+
 	&:last-child {
 		margin-right: 0;
-		
+
 		@include phone {
-		margin-right: 0;
-		margin-bottom: 0;
-	}
+			margin-right: 0;
+			margin-bottom: 0;
+		}
 	}
 
 	&:before {
@@ -105,14 +105,14 @@
 		position: absolute;
 		left: 0;
 		top: -3rem;
-		
+
 		@include phone {
-		left: 50%;
+			left: 50%;
 			transform: translateX(-50%);
+		}
+
 	}
-		
-	}
-	
+
 	@include tablet {
 		margin-left: 0.875rem;
 	}
@@ -171,7 +171,7 @@
 	overflow: hidden;
 
 	position: relative;
-	
+
 	@include phone {
 		width: 18.7rem;
 	}
@@ -195,8 +195,7 @@
 
 
 .aboutworks__form-form {
-	text-align: center;
-//	width: 23.6875rem;
+	text-align: center; //	width: 23.6875rem;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -209,20 +208,20 @@
 	padding: 1.9375rem 4.375rem 0;
 	margin: 0 auto;
 	margin-bottom: 1.9375rem;
-	
+
 	@include tablet {
 		font-size: 1.875rem;
 		margin-bottom: 1rem;
 	}
-	
+
 	@include tablet {
-		
+
 		margin-bottom: 1.7rem;
 	}
 }
 
 .aboutworks__form {
-	
+
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -238,7 +237,7 @@
 	border: none;
 	padding: 1.125rem 1.3125rem;
 	margin: 0 auto 1.125rem;
-	
+
 	@include phone {
 		width: 95%;
 		margin-bottom: 1.4rem;
@@ -256,12 +255,12 @@
 	margin: 0 auto 1.125rem;
 
 	resize: none;
-	
+
 	@include tablet {
 		margin-bottom: 1.55rem;
 	}
-	 @include phone {
-		 width: 95%;
+	@include phone {
+		width: 95%;
 		margin-bottom: 1.7rem;
 	}
 
@@ -270,4 +269,75 @@
 .aboutworks__button {
 	@include cardmenu;
 	width: 50%;
+}
+
+.js-aboutworks__form-modal {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+	padding: 22px 50px;
+
+	border-radius: 5px;
+
+}
+
+.js-aboutworks__form-modal-text {
+	color: #373e42;
+	margin-bottom: 1.3rem;
+}
+
+.js-aboutworks__form-btn {
+	@include cardmenu;
+	border-radius: 5px;
+
+}
+
+.js-aboutworks-input-error {
+	display: none;
+}
+
+.js-field-error {
+	position: absolute;
+	padding: 10px 20px;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	top: 15px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	
+	transition: 0.7s;
+
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		right: 50%;
+		transform: translateX(50%);
+		top: -12px;
+
+
+		border-right: 12px solid transparent;
+		border-bottom: 14px solid red;
+		border-left: 12px solid transparent;
+	}
+}
+
+.js-aboutworks-field-name-error {
+	top: 168px;
+	display: none;
+}
+
+.js-aboutworks-field-mail-error{
+	top: 237px;
+	display: none;
+}
+.js-aboutworks-field-mes-error {
+	top: 375px;
+	display: none;
 }
