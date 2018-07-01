@@ -12,8 +12,7 @@ html(lang="Ru ru")
 	link(rel='stylesheet' href='css/main.min.css')
 	
 	body
-		include common/preloader.pug
-		.wrapper.js-wrapper-preloader(class=`${wrapModif}`)
+		.wrapper(class=`${wrapModif}`)
 			include ./common/hamburgermenu.pug
 			include ./common/header.pug
 			
@@ -21,7 +20,7 @@ html(lang="Ru ru")
 				block content
 				
 			
-	
+		
 	script(src='js/bootloader.bundle.js')
 	script(src='js/vendor.bundle.js')
 	block scripts
