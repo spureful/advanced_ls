@@ -59,6 +59,10 @@
 		background-color: #fff;
 		color: $green;
 	}
+	
+	&_done {
+		display: none;
+	}
 }
 
 .welcome__main	{
