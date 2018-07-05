@@ -58,6 +58,7 @@
     "uglifyjs-webpack-plugin": "^1.2.5",
     "vue-loader": "^14.2.2",
     "vue-template-compiler": "2.5.13",
+    "webdriverio": "^4.13.1",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
     "webpack-stream": "^4.0.3"
@@ -73,6 +74,7 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "signale": "^1.1.0",
-    "vue": "2.5.13"
+    "vue": "2.5.13",
+    "vue-router": "^3.0.1"
   }
 }

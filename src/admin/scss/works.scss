@@ -1,0 +1,95 @@
+@mixin tablet {
+	@media screen and (max-width: 1000px) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media screen and (max-width: 490px) {
+		@content;
+	}
+}
+.works {
+ max-width: 320px;
+height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  
+  @include phone {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}
+.works__title-block {
+  margin-bottom: 20px;
+}
+
+.works__form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+justify-content: space-between;
+  
+  @include tablet {
+    justify-content: flex-start;
+  }
+
+}
+
+
+.works__form-title {
+  margin-bottom: 16px ;
+}
+
+.works__form-input{
+  margin-bottom: 19px;
+  
+  @include phone {
+    width: 100%;
+  }
+}
+
+.works__form-loadimage-btn{
+  font-family: Roboto, arial, sans-serif;
+  font-size: 16px;
+  color: #00bfa5;
+  background-color: transparent;
+  border: none;
+  padding-left: 45px;
+  
+  position: relative;
+  
+  cursor: pointer;
+  transition: 0.7s;
+  
+  &:hover {
+    text-decoration: underline;
+  }
+  
+  &:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 34px;
+    background-image: url(../img/load-img.svg);
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+  }
+  
+  @include tablet {
+    margin-bottom: 25px;
+  }
+  
+  @include phone {
+    margin-bottom: 30px;
+  }
+}
+
