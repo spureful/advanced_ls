@@ -1,72 +1,190 @@
-function mapFunc() {
-	var map;
-console.log("before123")
-function initMap() {
+(function initMap() {
 	console.log("123");
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 60.01887232, lng: 30.4304994},
+    zoom: 12,
 	  
-//    styles: [ {
-//          "featureType": "administrative",
-//          "elementType": "labels.text.fill",
-//          "stylers": [
-//              {
-//                  "color": "#444444"
-//              }
-//          ]
-//      },
-//      {
-//          "featureType": "landscape",
-//          "elementType": "all",
-//          "stylers": [
-//              {
-//                  "color": "#f2f2f2"
-//              }
-//          ]
-//        }]
+    
+   styles: [
+  {
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.icon",
+    "stylers": [
+      {
+        "visibility": "off"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "elementType": "labels.text.stroke",
+    "stylers": [
+      {
+        "color": "#f5f5f5"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.land_parcel",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#bdbdbd"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "poi",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "poi.park",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "road",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#ffffff"
+      }
+    ]
+  },
+  {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#757575"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#dadada"
+      }
+    ]
+  },
+  {
+    "featureType": "road.highway",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#616161"
+      }
+    ]
+  },
+  {
+    "featureType": "road.local",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.line",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#e5e5e5"
+      }
+    ]
+  },
+  {
+    "featureType": "transit.station",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#eeeeee"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry",
+    "stylers": [
+      {
+        "color": "#c9c9c9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#61dac9"
+      }
+    ]
+  },
+  {
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#9e9e9e"
+      }
+    ]
+  }
+]
   });
-};
-	initMap();
-};
+  
+  var myLatLng = {lat:60.05857608, lng: 30.47955609};
 
-mapFunc();
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'My home!'
+  });
+  
+  marker.setIcon("assets/images/about/map_marker.svg");
 
+})();
 
-
-///КАРТА//
-
-//function yMap() {
-//ymaps.ready(init);
-//console.log("ymap");
-////var geoObjects = [];
-//
-//function init() {
-//	var map = new ymaps.Map(document.getElementById('map'), {
-//		center: [59.94, 30.32],
-//		zoom: 12,
-//		controls: ['zoomControl'],
-//		behaviors: ['drag']
-//	});
-//
-//
-//    console.log("yamaaps")
-//
-////	var clusterer = new ymaps.Clusterer({
-////       clusterIcons: [{
-////		size: [100, 100],
-////		offsset: [-50, -50]
-////	}],
-////		clusterIconContentLayout: null
-////
-////
-////	});
-////	
-////	map.geoObjects.add(clusterer);
-////
-////	clusterer.add(geoObjects);
-//
-//};
-//	
-//	}
-//yMap();
