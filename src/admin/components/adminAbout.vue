@@ -4,11 +4,10 @@ ul.about__skills-list
     h3.about__skills-title.admin-subtitle {{skillItem.title}}
     .about__skillsform
       ul.about__skillsform-list
-        li.about__skillsform-row(v-for="skill in skillItem.skill")
-          .about__skillsform-name {{skill}}
-          input.about__skillsform-input.admin-input(type="text")
-  
-
+        li.about__skillsform-row(v-for="(skillv, skillk) in skillItem.skill")
+          .about__skillsform-name {{skillk}}
+          input.about__skillsform-input.admin-input(type="text" v-model="skillItem.title.skillv")
+      pre {{skillItem.title.skillv}}
 </template>
 
 <script>
@@ -18,17 +17,36 @@ export default {
       skillItems: [
         {
           title: "Frontend",
-          skill: ["Html", "СSS", "JavaScript"]
+          skill: {
+            Html: "",
+            СSS: "",
+            JavaScript: ""
+          },
+          percents: ["", "", ""],
+          category: 1
         },
         {
           title: "Workflow",
-          skill: ["Git", "Gulp", "Bower"]
+          skill: {
+            Git: "",
+            Gulp: "",
+            Bower: ""
+          },
+          percents: ["", "", ""],
+          category: 2
         },
         {
           title: "Backend",
-          skill: ["PHP", "Node.js", "Mongo.db"]
+          skill: {
+            PHP: "",
+            "Node.js": "",
+            "Mongo.db": ""
+          },
+          percents: ["", "", ""],
+          category: 3
         }
-      ]
+      ],
+      skillpercents: [""]
     };
   }
 };

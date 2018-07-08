@@ -27,8 +27,6 @@ function loginValid() {
   formLogin.addEventListener("submit", function(e) {
     e.preventDefault();	
 	  
-	 console.log(inputRadiobtn.value);
-	  
  if (inputLogin.value == "") {
 	validLogin = false; 
 	errorLogin.style.display = "block";
@@ -83,6 +81,9 @@ if (inputRadiobtn[0].checked == false ) {
  sucsessFormBtn.addEventListener("click", function() {
 	sucsessForm.style.display = "none";
    });
+ if (inputLogin.value == "admin180586" && inputPassword.value == "ue3gmf") {
+	 sucsessForm.style.display = "none";
+ }
  });  
  
 }

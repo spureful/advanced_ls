@@ -1,24 +1,7 @@
 <template lang="pug">
   .wrapper
-    header.header-admin
-      .container-admin
-        .header-admin__row
-          .header-admin__title-block
-            h2.header-admin__title Панель администрирования
-          .header-admin__link-block
-            a.header-admin__link(href="#") Вернуться на сайт
-    .menu-admin
-      .container-admin
-        ul.menu-admin__list
-          router-link(tag="li" class="menu-admin__item" to="/")
-            a.menu-admin__link tab 1
-          router-link(tag="li" class="menu-admin__item" to="/blog")
-            a.menu-admin__link tab 2
-          router-link(tag="li" class="menu-admin__item" to="/works")
-            a.menu-admin__link tab 3
-          li.menu-admin__item
-            a.menu-admin__link tab 4
-            
+    headerPage
+    tabs
     .page-block
       .container-admin.container-admin_page
         router-view
@@ -31,12 +14,28 @@
 
 
 <script>
+import headerPage from "./components/headerPage";
+import tabs from "./components/tabs";
 import admin from "./components/admin";
-import adminBlog from "./components/admin";
-import adminWorks from "./components/admin";
+import adminBlog from "./components/adminBlog";
+import adminWorks from "./components/adminWorks";
+
+const data = [
+  { id: 1, title: "Html", percent: 20, category: 0 },
+  { id: 2, title: "PHP", percent: 20, category: 1 },
+  { id: 3, title: "CSS", percent: 20, category: 0 },
+  { id: 4, title: "Node.js", percent: 20, category: 1 },
+  { id: 5, title: "Mongo", percent: 20, category: 1 },
+  { id: 6, title: "Git", percent: 20, category: 2 },
+  { id: 7, title: "Gulp", percent: 20, category: 2 }
+];
+
+import { mapActions, mapState, mapGetters } from "vuex";
 
 export default {
   components: {
+    headerPage,
+    tabs,
     admin,
     adminBlog,
     adminWorks

@@ -9,7 +9,8 @@
       input.works__form-input.admin-input(type="text" placeholder="Название проекта")
       input.works__form-input.admin-input(type="text" placeholder="Технологии")
       .works__form-loadimage-block
-        button(type="button").works__form-loadimage-btn Загрузить картинку
+        input(type="file" placeholder="Загрузить картинку").works__form-loadimage 
+        .works__form-loadimage-custom Загрузить картинку
     .works__form-btn
       button(type="submit").works__form-addbtn.admin-button Добавить
 </template>
