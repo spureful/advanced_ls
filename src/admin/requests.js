@@ -1,8 +1,8 @@
 import axios from "axios";
 
 axios.defaults.baseURL = "http://webdev-api.loftschool.com";
-axios.defaults.headers["Authorization"] = `Bearer ${localStorage.getItem(
-  "token"
+axios.defaults.headers["Authorization"] = `Bearer
+  "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly93ZWJkZXYtYXBpLmxvZnRzY2hvb2wuY29tL2xvZ2luIiwiaWF0IjoxNTMxMDM5MTI3LCJleHAiOjE1MzEwNTcxMjcsIm5iZiI6MTUzMTAzOTEyNywianRpIjoibjE4Y2w4RG9QQjdlWlM3NiJ9.LQ2ONuOGB-UJvvLKgR8CoJvKFiIVeDMREGR0wwhvkxQ"
 )}`;
 
 axios.interceptors.response.use(

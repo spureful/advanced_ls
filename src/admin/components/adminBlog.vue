@@ -29,13 +29,14 @@ export default {
     ...mapActions(["loadArticle"]),
     loadNewArticle() {
       console.log(this.article);
-      fetch(
-        "http://webdev-api.loftschool.com/posts?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly93ZWJkZXYtYXBpLmxvZnRzY2hvb2wuY29tL2xvZ2luIiwiaWF0IjoxNTMxMDM5MTI3LCJleHAiOjE1MzEwNTcxMjcsIm5iZiI6MTUzMTAzOTEyNywianRpIjoibjE4Y2w4RG9QQjdlWlM3NiJ9.LQ2ONuOGB-UJvvLKgR8CoJvKFiIVeDMREGR0wwhvkxQ",
-        {
-          method: "POST",
-          body: this.article
-        }
-      )
+      fetch("http://webdev-api.loftschool.com/posts", {
+        method: "POST",
+        headers: {
+          Authorization:
+            "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjEsImlzcyI6Imh0dHA6Ly93ZWJkZXYtYXBpLmxvZnRzY2hvb2wuY29tL2xvZ2luIiwiaWF0IjoxNTMxMDQ0ODc3LCJleHAiOjE1MzEwNjI4NzcsIm5iZiI6MTUzMTA0NDg3NywianRpIjoiekhpY3dxSm9YbEFhNWVxUSJ9.i3CASJ0h3IRC6IlO096u7SHMmfiYGG2_vCAGxV_-5As"
+        },
+        body: this.article
+      })
         .then(resp => resp.json())
         .then(resp => {
           if (respObj.resultCode !== "OK") {

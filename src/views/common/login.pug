@@ -13,10 +13,10 @@ script(type="text/x-template")#login-form
 			button.js-suscess-btn(type="button") Закрыть
 		.form-login__input-row
 			.form-login__input-before.form-login__input-before_login
-			input(type='text' class='form-login__input js-form-login_login' name='form-login__login' placeholder='Логин')
+			input(type='text' class='form-login__input js-form-login_login' name='form-login__login' placeholder='Логин' v-model="user.name")
 		.form-login__input-row
 			.form-login__input-before.form-login__input-before_password
-			input(type='password' class='form-login__input js-form-login_password' name='form-login__password' placeholder='Пароль')
+			input(type='password' class='form-login__input js-form-login_password' name='form-login__password' placeholder='Пароль' v-model="user.password")
 		.form-login__checkbox-block
 			label.form-login__checkbox-label
 				input(type='checkbox' id='checkbox__login' checked tabindex='0' ).form-login__checkbox.js-form-login_checkbox 
@@ -40,4 +40,4 @@ script(type="text/x-template")#login-form
 				
 		.form-login-buttons-row
 			button.form-login-button.form-login-button-main.js-tomain-btn(type='button') На главную
-			button.form-login-button.form-login-button-login(type='submit') Войти
+			button.form-login-button.form-login-button-login(type='submit' v-on:submit="123") Войти

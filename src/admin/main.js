@@ -5,7 +5,7 @@ import VueAxios from "vue-axios";
 import store from "./store";
 import axios from "./requests";
 
-//store.$axios = axios;
+store.$axios = axios;
 
 new Vue({
   el: "#admin-app",
