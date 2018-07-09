@@ -1,8 +1,7 @@
-script(type="text/x-template")#login-form
-.login.js-login.js__rotate-card#login-component
+.login.js-login.js__rotate-card
 	.login__title
 		h2.subtitle.login__title-txt Авторизуйтесь
-	
+
 	form.form-login#js-form-login
 		.js-error-login.js-error-login_login Введите логин
 		.js-error-login.js-error-login_password Введите пароль
@@ -11,6 +10,8 @@ script(type="text/x-template")#login-form
 		.js-sucsess-login 
 			.js-sucsess-text Введите верные логин и пароль!
 			button.js-suscess-btn(type="button") Закрыть
+	
+	
 		.form-login__input-row
 			.form-login__input-before.form-login__input-before_login
 			input(type='text' class='form-login__input js-form-login_login' name='form-login__login' placeholder='Логин' v-model="user.name")
@@ -22,7 +23,6 @@ script(type="text/x-template")#login-form
 				input(type='checkbox' id='checkbox__login' checked tabindex='0' ).form-login__checkbox.js-form-login_checkbox 
 				.form-login__checkbox-custom
 				label.form-login__checkbox-text(for='checkbox__login') Я человек
-			
 		.form-login-robot Вы точно не робот?
 		.form-login-radio-row
 			label.form-login-radio-label
@@ -30,14 +30,15 @@ script(type="text/x-template")#login-form
 				.form-login-radio-block
 					.form-login-radio-custom(tabindex='0')
 					label.form-login-radio-text(for='form-login-radio-yes') Да
-				
 			label.form-login-radio-label
 				input(type='radio' id='form-login-radio-no' name='form-login-radio' value='no').form-login-radio.js-form-login_radio
 				.form-login-radio-block
 					.form-login-radio-custom(tabindex='0')
 					label.form-login-radio-text(for='form-login-radio-no') Не уверен
-				
-				
 		.form-login-buttons-row
 			button.form-login-button.form-login-button-main.js-tomain-btn(type='button') На главную
-			button.form-login-button.form-login-button-login(type='submit' v-on:submit="123") Войти
+			button.form-login-button.form-login-button-login(type='submit' v-on:submit="login") Войти
+		
+			
+//			#login-component
+//	script(type="text/x-template")#login-form

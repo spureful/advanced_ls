@@ -4,9 +4,13 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 import blog from "./modules/blog"
+import works from "./modules/works"
+import skills from "./modules/skills"
 
 export const store = new Vuex.Store({
   modules: {
-    blog
+    blog,
+	works,
+    skills
   }
 });

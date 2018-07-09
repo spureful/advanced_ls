@@ -6,11 +6,12 @@ new Vue({
   data() {
     return {
       user: {
-        name: "admin180586",
-        password: "ue3gmf"
+        name: "",
+        password: ""
       }
     };
   },
+  template: "#login-form",
   methods: {
     login() {
 	  console.log("123");	
@@ -28,5 +29,7 @@ new Vue({
         .catch(e => console.error(e));
     }
   },
-  template: "#login-form"
+  
 });
+
+console.log("see you");
