@@ -1,0 +1,266 @@
+@mixin tablet {
+	@media screen and (max-width: 1000px) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media screen and (max-width: 490px) {
+		@content;
+	}
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto, arial, sans-serif;
+  color: #455a64;
+  @include phone {
+    font-size: 14px;
+  }
+
+}
+
+.wrapper {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-admin,
+.menu-admin {
+  flex: 0 0 auto;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container-admin {
+  width: 95%;
+  margin: 0 auto;
+
+
+}
+
+.header-admin {
+  width: 100%;
+  background-color: #00bfa5;
+  color: #fff;
+  flex: 0;
+  
+  
+}
+
+.header-admin__row {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @include phone {
+    flex-direction: column;
+    
+  }
+}
+
+.header-admin__title {
+  font-size: 28px;
+  font-weight: 500;
+  
+  @include tablet {
+    font-size: 21px;
+  }
+  
+}
+
+.header-admin__link-block {
+   @include phone {
+    order: -1;
+     padding-top: 23px;
+
+  }
+}
+.header-admin__link {
+  color: rgba(#fff, 0.7);
+  font-weight: 500;
+  &:hover {
+    text-decoration: underline;
+  }
+  
+ 
+  
+}
+
+
+.menu-admin {
+  background-color: #f0efe9;
+  width: 100%;
+  flex: 0;
+}
+
+.menu-admin__list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: center;
+  
+   @include phone {
+    flex-direction: column;
+  }
+}
+
+.menu-admin__item {
+  border-right: 2px solid #fff;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 25%;
+
+  &_active {
+    background-color: #fff;
+
+    .menu-admin__link {
+      color: #00bfa5;
+    }
+  }
+  
+  @include phone {
+    border-right: 0;
+    border-bottom: 2px solid #fff;
+    width: 100%;
+  }
+}
+
+.menu-admin__link {
+  display: block;
+  padding: 20px 70px;
+  text-transform: uppercase;
+  color: rgba(#455a64, 0.8);
+  font-weight: 500;
+
+
+}
+
+
+.page-block {
+  flex: 1 0 auto;
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  background-image: url(../img/admin_bg.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+
+}
+
+
+.container-admin_page {
+  padding-top: 50px;
+  margin-bottom: 42px;
+}
+
+.modal {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px 50px;
+  text-align: center;
+  display: none;
+}
+
+.modal__text {
+  margin-bottom: 17px;
+}
+
+.modal__button {
+  margin: 0 auto;
+ 
+  }
+
+.admin-title {
+  font-size: 21px;
+  font-weight: 500;
+  color: #455a64;
+}
+
+.admin-subtitle {
+  font-weight: 500;
+  color: #455a64;
+  
+  
+}
+
+.admin-input {
+  font-family: Roboto, arial, sans-serif;
+  font-size: 16px;
+  height: 43px;
+  border-radius: 5px;
+  border: none;
+  padding: 14px 20px;
+  text-transform: capitalize;
+  
+  @include phone {
+    font-size: 14px;
+  }
+}
+
+.admin-button {
+  font-family: Roboto, arial, sans-serif;
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+  background-color: #00bfa5;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  
+  transition: 0.7s;
+
+  &:hover {
+    background-color: #009688;
+  }
+  
+  @include phone {
+    font-size: 14px;
+  }
+}
+

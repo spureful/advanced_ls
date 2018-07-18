@@ -27,8 +27,6 @@ function loginValid() {
   formLogin.addEventListener("submit", function(e) {
     e.preventDefault();	
 	  
-	 console.log(inputRadiobtn.value);
-	  
  if (inputLogin.value == "") {
 	validLogin = false; 
 	errorLogin.style.display = "block";
@@ -83,6 +81,32 @@ if (inputRadiobtn[0].checked == false ) {
  sucsessFormBtn.addEventListener("click", function() {
 	sucsessForm.style.display = "none";
    });
+ if (inputLogin.value == "admin180586" && inputPassword.value == "ue3gmf") {
+	 sucsessForm.style.display = "none";
+	 
+	const url = "http://webdev-api.loftschool.com/login";
+	 const myHeaders = {
+		body: {
+			name: "admin180586",
+        password: "ue3gmf"}
+	 };
+	 
+	 fetch(url, { method: 'POST',
+				  body:  {
+					name: inputLogin.value,
+					  pssword: inputPassword.value
+				  }
+				})
+		 .then(function(response) {
+		  if (response.status === 200) {
+		 	const ttl = Math.floor(Date.now() / 1000 + response.data.ttl);
+            localStorage.setItem("token", response.data.token);
+            localStorage.setItem("ttl", ttl);
+            window.location.href = "blog.html";
+		  }
+    return response();
+   }).catch( alert );
+ }
  });  
  
 }
@@ -90,3 +114,4 @@ if (inputRadiobtn[0].checked == false ) {
 //if (document.getElementsByClassName(".form-login").length > 0) {
 	loginValid();
 //}
+
