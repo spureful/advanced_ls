@@ -1,4 +1,5 @@
 import Vue from "vue";
+
 import axios from "axios";
 
 new Vue({
@@ -28,7 +29,7 @@ new Vue({
         })
         .catch(e => console.error(e));
     }
-  },
+  }
   
 });
 

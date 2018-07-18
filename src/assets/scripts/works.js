@@ -3,6 +3,7 @@ import "./modules/slider";
 import "./modules/aboutworks-form";
 import "./modules/headerparallax";
 
+
 import menuAppear from "./modules/menu";
 
 const preloader = (function() {
